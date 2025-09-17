@@ -66,6 +66,7 @@
             // 
             // iconAceptar
             // 
+            this.iconAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconAceptar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconAceptar.ForeColor = System.Drawing.Color.White;
@@ -79,6 +80,7 @@
             // 
             // iconCancelar
             // 
+            this.iconCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconCancelar.ForeColor = System.Drawing.Color.White;

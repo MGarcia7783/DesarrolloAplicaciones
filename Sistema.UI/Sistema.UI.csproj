@@ -64,6 +64,12 @@
     <Compile Include="FormulariosBase\frmPlantilla.Designer.cs">
       <DependentUpon>frmPlantilla.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConexion.Designer.cs">
+      <DependentUpon>frmConexion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmMensajes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormulariosBase\frmPlantilla.resx">
       <DependentUpon>frmPlantilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConexion.resx">
+      <DependentUpon>frmConexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMensajes.resx">
       <DependentUpon>frmMensajes.cs</DependentUpon>
@@ -116,6 +125,10 @@
     <ProjectReference Include="..\Sistema.BLL\Sistema.BLL.csproj">
       <Project>{9108b4d9-e29b-4972-87a9-9071e5ecb026}</Project>
       <Name>Sistema.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sistema.DAL\Sistema.DAL.csproj">
+      <Project>{6ef2ebff-4e4a-43b6-b377-71a8698ea1a6}</Project>
+      <Name>Sistema.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sistema.Entity\Sistema.Entity.csproj">
       <Project>{38cf32cc-d79c-4f1e-baef-434cccbb7774}</Project>
