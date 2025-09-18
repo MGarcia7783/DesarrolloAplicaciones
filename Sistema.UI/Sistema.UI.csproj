@@ -64,11 +64,23 @@
     <Compile Include="FormulariosBase\frmPlantilla.Designer.cs">
       <DependentUpon>frmPlantilla.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAgregarLaboratorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAgregarLaboratorio.Designer.cs">
+      <DependentUpon>frmAgregarLaboratorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmConexion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmConexion.Designer.cs">
       <DependentUpon>frmConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLaboratorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLaboratorio.Designer.cs">
+      <DependentUpon>frmLaboratorio.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmMensajes.cs">
       <SubType>Form</SubType>
@@ -83,13 +95,21 @@
       <DependentUpon>MDIMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulos\Mensajes.cs" />
+    <Compile Include="Modulos\mostrarModal.cs" />
+    <Compile Include="Modulos\Utilidades.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormulariosBase\frmPlantilla.resx">
       <DependentUpon>frmPlantilla.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAgregarLaboratorio.resx">
+      <DependentUpon>frmAgregarLaboratorio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConexion.resx">
       <DependentUpon>frmConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLaboratorio.resx">
+      <DependentUpon>frmLaboratorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMensajes.resx">
       <DependentUpon>frmMensajes.cs</DependentUpon>

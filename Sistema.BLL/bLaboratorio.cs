@@ -55,7 +55,7 @@ namespace Sistema.BLL
                     campoInvalido = "email"
                 };
 
-            if (!Utilidades.emailValido(laboratorio.email))
+            if (!Validar.emailValido(laboratorio.email))
                 return new resultadoOperacion
                 {
                     esValido = false,

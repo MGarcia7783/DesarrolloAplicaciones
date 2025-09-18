@@ -246,6 +246,7 @@
             this.listadoDeLaboratoriosToolStripMenuItem.Name = "listadoDeLaboratoriosToolStripMenuItem";
             this.listadoDeLaboratoriosToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.listadoDeLaboratoriosToolStripMenuItem.Text = "Listado de laboratorios";
+            this.listadoDeLaboratoriosToolStripMenuItem.Click += new System.EventHandler(this.listadoDeLaboratoriosToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 

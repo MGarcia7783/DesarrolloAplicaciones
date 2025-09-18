@@ -1,0 +1,94 @@
+﻿namespace Sistema.UI.Formularios
+{
+    partial class frmLaboratorio
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            ((System.ComponentModel.ISupportInitialize)(this.iconAgregar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Size = new System.Drawing.Size(299, 37);
+            this.lblTitulo.Text = "Módulo de Laboratorio";
+            // 
+            // iconAgregar
+            // 
+            this.iconAgregar.Location = new System.Drawing.Point(322, 21);
+            this.iconAgregar.Click += new System.EventHandler(this.iconAgregar_Click);
+            // 
+            // iconEliminar
+            // 
+            this.iconEliminar.Location = new System.Drawing.Point(439, 21);
+            this.iconEliminar.Click += new System.EventHandler(this.iconEliminar_Click);
+            // 
+            // iconEditar
+            // 
+            this.iconEditar.Location = new System.Drawing.Point(385, 21);
+            this.iconEditar.Click += new System.EventHandler(this.iconEditar_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.DisabledState.Parent = this.txtBuscar;
+            this.txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscar.FocusedState.Parent = this.txtBuscar;
+            this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscar.HoverState.Parent = this.txtBuscar;
+            this.txtBuscar.Location = new System.Drawing.Point(530, 21);
+            this.txtBuscar.ShadowDecoration.Parent = this.txtBuscar;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // iconCerrar
+            // 
+            this.iconCerrar.Location = new System.Drawing.Point(996, 21);
+            // 
+            // frmLaboratorio
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1173, 552);
+            this.Name = "frmLaboratorio";
+            this.Text = "frmLaboratorio";
+            this.Load += new System.EventHandler(this.frmLaboratorio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.iconAgregar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+    }
+}

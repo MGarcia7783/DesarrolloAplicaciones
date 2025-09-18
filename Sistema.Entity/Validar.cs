@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema.Entity
 {
-    public class Utilidades
+    public class Validar
     {
         public static bool emailValido(string email)
         {

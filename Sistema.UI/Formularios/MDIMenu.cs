@@ -123,9 +123,18 @@ namespace Sistema.UI.Formularios
             }
         }
 
+        #region Opciones del Menú
+
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new frmPlantilla(), true);
         }
+
+        private void listadoDeLaboratoriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmLaboratorio(), true);
+        }
+
+        #endregion
     }
 }
