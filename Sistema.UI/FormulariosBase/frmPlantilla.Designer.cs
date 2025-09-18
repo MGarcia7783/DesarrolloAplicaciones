@@ -35,20 +35,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.dgvListado = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.iconCerrar = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
             this.iconEliminar = new System.Windows.Forms.PictureBox();
             this.iconEditar = new System.Windows.Forms.PictureBox();
             this.iconAgregar = new System.Windows.Forms.PictureBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.dgvListado = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconAgregar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -70,82 +70,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1189, 80);
             this.panel1.TabIndex = 0;
-            // 
-            // iconCerrar
-            // 
-            this.iconCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconCerrar.Image = global::Sistema.UI.Properties.Resources.icon_salida_48;
-            this.iconCerrar.Location = new System.Drawing.Point(1108, 21);
-            this.iconCerrar.Name = "iconCerrar";
-            this.iconCerrar.Size = new System.Drawing.Size(42, 42);
-            this.iconCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconCerrar.TabIndex = 5;
-            this.iconCerrar.TabStop = false;
-            this.iconCerrar.Click += new System.EventHandler(this.iconCerrar_Click);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscar.BorderRadius = 8;
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.DefaultText = "";
-            this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscar.DisabledState.Parent = this.txtBuscar;
-            this.txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscar.FocusedState.Parent = this.txtBuscar;
-            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscar.HoverState.Parent = this.txtBuscar;
-            this.txtBuscar.IconLeft = global::Sistema.UI.Properties.Resources.icons8_search_24;
-            this.txtBuscar.Location = new System.Drawing.Point(642, 21);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.PasswordChar = '\0';
-            this.txtBuscar.PlaceholderText = "Buscar registro...";
-            this.txtBuscar.SelectedText = "";
-            this.txtBuscar.ShadowDecoration.Parent = this.txtBuscar;
-            this.txtBuscar.Size = new System.Drawing.Size(419, 40);
-            this.txtBuscar.TabIndex = 4;
-            // 
-            // iconEliminar
-            // 
-            this.iconEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconEliminar.Image = global::Sistema.UI.Properties.Resources.icon_del_48;
-            this.iconEliminar.Location = new System.Drawing.Point(551, 21);
-            this.iconEliminar.Name = "iconEliminar";
-            this.iconEliminar.Size = new System.Drawing.Size(42, 42);
-            this.iconEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconEliminar.TabIndex = 3;
-            this.iconEliminar.TabStop = false;
-            // 
-            // iconEditar
-            // 
-            this.iconEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconEditar.Image = global::Sistema.UI.Properties.Resources.icon_edit_48;
-            this.iconEditar.Location = new System.Drawing.Point(497, 21);
-            this.iconEditar.Name = "iconEditar";
-            this.iconEditar.Size = new System.Drawing.Size(38, 42);
-            this.iconEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconEditar.TabIndex = 2;
-            this.iconEditar.TabStop = false;
-            // 
-            // iconAgregar
-            // 
-            this.iconAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconAgregar.Image = global::Sistema.UI.Properties.Resources.icon_mas_48;
-            this.iconAgregar.Location = new System.Drawing.Point(434, 21);
-            this.iconAgregar.Name = "iconAgregar";
-            this.iconAgregar.Size = new System.Drawing.Size(42, 42);
-            this.iconAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconAgregar.TabIndex = 1;
-            this.iconAgregar.TabStop = false;
             // 
             // lblTitulo
             // 
@@ -239,6 +163,82 @@
             this.guna2Elipse2.BorderRadius = 15;
             this.guna2Elipse2.TargetControl = this.dgvListado;
             // 
+            // iconCerrar
+            // 
+            this.iconCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconCerrar.Image = global::Sistema.UI.Properties.Resources.icon_salida_48;
+            this.iconCerrar.Location = new System.Drawing.Point(1108, 21);
+            this.iconCerrar.Name = "iconCerrar";
+            this.iconCerrar.Size = new System.Drawing.Size(42, 42);
+            this.iconCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconCerrar.TabIndex = 5;
+            this.iconCerrar.TabStop = false;
+            this.iconCerrar.Click += new System.EventHandler(this.iconCerrar_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscar.BorderRadius = 8;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.DefaultText = "";
+            this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.DisabledState.Parent = this.txtBuscar;
+            this.txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscar.FocusedState.Parent = this.txtBuscar;
+            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscar.HoverState.Parent = this.txtBuscar;
+            this.txtBuscar.IconLeft = global::Sistema.UI.Properties.Resources.icons8_search_24;
+            this.txtBuscar.Location = new System.Drawing.Point(642, 21);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.PasswordChar = '\0';
+            this.txtBuscar.PlaceholderText = "Buscar registro...";
+            this.txtBuscar.SelectedText = "";
+            this.txtBuscar.ShadowDecoration.Parent = this.txtBuscar;
+            this.txtBuscar.Size = new System.Drawing.Size(419, 40);
+            this.txtBuscar.TabIndex = 4;
+            // 
+            // iconEliminar
+            // 
+            this.iconEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconEliminar.Image = global::Sistema.UI.Properties.Resources.icon_del_48;
+            this.iconEliminar.Location = new System.Drawing.Point(551, 21);
+            this.iconEliminar.Name = "iconEliminar";
+            this.iconEliminar.Size = new System.Drawing.Size(42, 42);
+            this.iconEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconEliminar.TabIndex = 3;
+            this.iconEliminar.TabStop = false;
+            // 
+            // iconEditar
+            // 
+            this.iconEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconEditar.Image = global::Sistema.UI.Properties.Resources.icon_edit_48;
+            this.iconEditar.Location = new System.Drawing.Point(497, 21);
+            this.iconEditar.Name = "iconEditar";
+            this.iconEditar.Size = new System.Drawing.Size(38, 42);
+            this.iconEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconEditar.TabIndex = 2;
+            this.iconEditar.TabStop = false;
+            // 
+            // iconAgregar
+            // 
+            this.iconAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconAgregar.Image = global::Sistema.UI.Properties.Resources.icon_mas_48;
+            this.iconAgregar.Location = new System.Drawing.Point(434, 21);
+            this.iconAgregar.Name = "iconAgregar";
+            this.iconAgregar.Size = new System.Drawing.Size(42, 42);
+            this.iconAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconAgregar.TabIndex = 1;
+            this.iconAgregar.TabStop = false;
+            // 
             // frmPlantilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,26 +251,25 @@
             this.Text = "frmPlantilla";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconAgregar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label lblTitulo;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         public System.Windows.Forms.PictureBox iconAgregar;
         public System.Windows.Forms.PictureBox iconEliminar;
         public System.Windows.Forms.PictureBox iconEditar;
         public Guna.UI2.WinForms.Guna2TextBox txtBuscar;
         public System.Windows.Forms.PictureBox iconCerrar;
         public Guna.UI2.WinForms.Guna2DataGridView dgvListado;
+        public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        public Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }

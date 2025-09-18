@@ -64,11 +64,23 @@
     <Compile Include="FormulariosBase\frmPlantilla.Designer.cs">
       <DependentUpon>frmPlantilla.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAgregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAgregarCategoria.Designer.cs">
+      <DependentUpon>frmAgregarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmAgregarLaboratorio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmAgregarLaboratorio.Designer.cs">
       <DependentUpon>frmAgregarLaboratorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCategorias.Designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmConexion.cs">
       <SubType>Form</SubType>
@@ -102,8 +114,14 @@
     <EmbeddedResource Include="FormulariosBase\frmPlantilla.resx">
       <DependentUpon>frmPlantilla.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAgregarCategoria.resx">
+      <DependentUpon>frmAgregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAgregarLaboratorio.resx">
       <DependentUpon>frmAgregarLaboratorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConexion.resx">
       <DependentUpon>frmConexion.cs</DependentUpon>

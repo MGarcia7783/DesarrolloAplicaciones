@@ -135,6 +135,11 @@ namespace Sistema.UI.Formularios
             AbrirFormulario(new frmLaboratorio(), true);
         }
 
+        private void listadoDeCategoríasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmCategorias(), true);
+        }
+
         #endregion
     }
 }

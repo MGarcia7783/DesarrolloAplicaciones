@@ -258,6 +258,7 @@
             this.listadoDeCategoríasToolStripMenuItem.Name = "listadoDeCategoríasToolStripMenuItem";
             this.listadoDeCategoríasToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.listadoDeCategoríasToolStripMenuItem.Text = "Listado de categorías";
+            this.listadoDeCategoríasToolStripMenuItem.Click += new System.EventHandler(this.listadoDeCategoríasToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 

@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.iconAceptar = new FontAwesome.Sharp.IconButton();
-            this.iconCancelar = new FontAwesome.Sharp.IconButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -45,6 +43,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.iconCancelar = new FontAwesome.Sharp.IconButton();
+            this.iconAceptar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -53,48 +53,6 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
-            // 
-            // iconAceptar
-            // 
-            this.iconAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconAceptar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconAceptar.IconChar = FontAwesome.Sharp.IconChar.CircleCheck;
-            this.iconAceptar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconAceptar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconAceptar.IconSize = 30;
-            this.iconAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconAceptar.Location = new System.Drawing.Point(124, 3);
-            this.iconAceptar.Name = "iconAceptar";
-            this.iconAceptar.Padding = new System.Windows.Forms.Padding(5);
-            this.iconAceptar.Size = new System.Drawing.Size(123, 44);
-            this.iconAceptar.TabIndex = 0;
-            this.iconAceptar.Text = "Aceptar";
-            this.iconAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.iconAceptar, "Grabar registro");
-            this.iconAceptar.UseVisualStyleBackColor = true;
-            this.iconAceptar.Click += new System.EventHandler(this.iconAceptar_Click);
-            // 
-            // iconCancelar
-            // 
-            this.iconCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconCancelar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconCancelar.IconChar = FontAwesome.Sharp.IconChar.CircleXmark;
-            this.iconCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCancelar.IconSize = 30;
-            this.iconCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconCancelar.Location = new System.Drawing.Point(253, 3);
-            this.iconCancelar.Name = "iconCancelar";
-            this.iconCancelar.Padding = new System.Windows.Forms.Padding(5);
-            this.iconCancelar.Size = new System.Drawing.Size(123, 44);
-            this.iconCancelar.TabIndex = 2;
-            this.iconCancelar.Text = "Cancelar";
-            this.iconCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.iconCancelar, "Cerrar ventana");
-            this.iconCancelar.UseVisualStyleBackColor = true;
-            this.iconCancelar.Click += new System.EventHandler(this.iconCancelar_Click);
             // 
             // guna2Elipse1
             // 
@@ -226,6 +184,7 @@
             this.txtServidor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtServidor.DisabledState.Parent = this.txtServidor;
             this.txtServidor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtServidor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtServidor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtServidor.FocusedState.Parent = this.txtServidor;
             this.txtServidor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -238,7 +197,7 @@
             this.txtServidor.PlaceholderText = "";
             this.txtServidor.SelectedText = "";
             this.txtServidor.ShadowDecoration.Parent = this.txtServidor;
-            this.txtServidor.Size = new System.Drawing.Size(371, 36);
+            this.txtServidor.Size = new System.Drawing.Size(388, 42);
             this.txtServidor.TabIndex = 2;
             // 
             // label2
@@ -301,6 +260,48 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(396, 50);
             this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // iconCancelar
+            // 
+            this.iconCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconCancelar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconCancelar.IconChar = FontAwesome.Sharp.IconChar.CircleXmark;
+            this.iconCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCancelar.IconSize = 30;
+            this.iconCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconCancelar.Location = new System.Drawing.Point(253, 3);
+            this.iconCancelar.Name = "iconCancelar";
+            this.iconCancelar.Padding = new System.Windows.Forms.Padding(5);
+            this.iconCancelar.Size = new System.Drawing.Size(123, 44);
+            this.iconCancelar.TabIndex = 2;
+            this.iconCancelar.Text = "Cancelar";
+            this.iconCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.iconCancelar, "Cerrar ventana");
+            this.iconCancelar.UseVisualStyleBackColor = true;
+            this.iconCancelar.Click += new System.EventHandler(this.iconCancelar_Click);
+            // 
+            // iconAceptar
+            // 
+            this.iconAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconAceptar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconAceptar.IconChar = FontAwesome.Sharp.IconChar.CircleCheck;
+            this.iconAceptar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconAceptar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconAceptar.IconSize = 30;
+            this.iconAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconAceptar.Location = new System.Drawing.Point(124, 3);
+            this.iconAceptar.Name = "iconAceptar";
+            this.iconAceptar.Padding = new System.Windows.Forms.Padding(5);
+            this.iconAceptar.Size = new System.Drawing.Size(123, 44);
+            this.iconAceptar.TabIndex = 0;
+            this.iconAceptar.Text = "Aceptar";
+            this.iconAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.iconAceptar, "Grabar registro");
+            this.iconAceptar.UseVisualStyleBackColor = true;
+            this.iconAceptar.Click += new System.EventHandler(this.iconAceptar_Click);
             // 
             // frmConexion
             // 
