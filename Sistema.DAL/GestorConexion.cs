@@ -52,7 +52,7 @@ namespace Sistema.DAL
         /// </summary>
         /// 
 
-        public static string ObtenerConexion()
+        public static SqlConnection ObtenerConexion()
         {
             var datosConexion = CargarDatosConexion();
 
@@ -64,7 +64,7 @@ namespace Sistema.DAL
                 throw new InvalidOperationException("La conexión al servidor no está configurada.");
             }
 
-            return datosConexion.CadenaConexion;
+            return new SqlConnection(datosConexion.CadenaConexion);
         }
 
         /// <summary>
