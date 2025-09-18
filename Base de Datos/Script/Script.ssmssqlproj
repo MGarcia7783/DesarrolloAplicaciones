@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Script">
+  <Items>
+    <LogicalFolder Name="Conexiones" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="MGarcia:MGARCIA\VICTUS">
+          <Created>2025-09-05T04:10:06.5850532-06:00</Created>
+          <Type>SQL</Type>
+          <Server>MGarcia</Server>
+          <UserName />
+          <Authentication>Autenticación de Windows</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <TrustServerCertificate>False</TrustServerCertificate>
+          <EncryptionOption>False</EncryptionOption>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Consultas" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="Base de Datos.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MGarcia:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MGarcia</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Base de Datos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CRUD Caja.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MGarcia:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MGarcia</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CRUD Caja.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CRUD Categorias.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MGarcia:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MGarcia</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CRUD Categorias.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CRUD Clientes.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MGarcia:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MGarcia</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CRUD Clientes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CRUD Compras.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MGarcia:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MGarcia</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CRUD Compras.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CRUD Empresa.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MGarcia:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MGarcia</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CRUD Empresa.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CRUD Laboratorios.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MGarcia:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MGarcia</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CRUD Laboratorios.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CRUD Pedidos.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MGarcia:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MGarcia</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CRUD Pedidos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CRUD Productos.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MGarcia:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MGarcia</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CRUD Productos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CRUD Usuarios.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MGarcia:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MGarcia</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CRUD Usuarios.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Generar Respaldo.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MGarcia:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MGarcia</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Generar Respaldo.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Varios" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
