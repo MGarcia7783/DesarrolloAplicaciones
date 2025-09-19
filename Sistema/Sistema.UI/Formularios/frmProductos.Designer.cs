@@ -43,6 +43,14 @@
             // 
             this.iconAgregar.Click += new System.EventHandler(this.iconAgregar_Click);
             // 
+            // iconEliminar
+            // 
+            this.iconEliminar.Click += new System.EventHandler(this.iconEliminar_Click);
+            // 
+            // iconEditar
+            // 
+            this.iconEditar.Click += new System.EventHandler(this.iconEditar_Click);
+            // 
             // txtBuscar
             // 
             this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -55,6 +63,7 @@
             this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBuscar.HoverState.Parent = this.txtBuscar;
             this.txtBuscar.ShadowDecoration.Parent = this.txtBuscar;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // frmProductos
             // 

@@ -258,13 +258,21 @@ namespace Sistema.UI.Formularios
 
                 resultadoOperacion resultado;
 
-                resultado = bProducto.registrarProducto(producto);
+                if(int.TryParse(txtId.Text.Trim(), out int idProducto) && idProducto == 0)
+                {
+                    resultado = bProducto.registrarProducto(producto);
+                }
+                else
+                {
+                    producto.idProducto = idProducto;
+                    resultado = bProducto.editarProducto(producto);
+                }
 
-                if(!resultado.esValido)
+                if (!resultado.esValido)
                 {
                     mensaje.mensajeValidacion(resultado.mensaje);
 
-                    if(!String.IsNullOrWhiteSpace(resultado.campoInvalido))
+                    if (!String.IsNullOrWhiteSpace(resultado.campoInvalido))
                     {
                         errorControl(resultado.campoInvalido);
                     }

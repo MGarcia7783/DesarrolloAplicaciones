@@ -63,14 +63,40 @@ namespace Sistema.UI.Formularios
             try
             {
                 int id = Convert.ToInt32(dgvListado.Rows[filaSeleccionada].Cells["ID"].Value);
-                string Producto = dgvListado.Rows[filaSeleccionada].Cells["Producto"].Value?.ToString();
-                string email = dgvListado.Rows[filaSeleccionada].Cells["EMAIL"].Value?.ToString();
-                string telefono = dgvListado.Rows[filaSeleccionada].Cells["TELEFONO"].Value?.ToString();
-                string contacto = dgvListado.Rows[filaSeleccionada].Cells["CONTACTO"].Value?.ToString();
+                string codigo = dgvListado.Rows[filaSeleccionada].Cells["CODIGO"].Value?.ToString();
+                string producto = dgvListado.Rows[filaSeleccionada].Cells["PRODUCTO"].Value?.ToString();
+                string formatoCompra = dgvListado.Rows[filaSeleccionada].Cells["FORMATO"].Value?.ToString();
+                string categoria = dgvListado.Rows[filaSeleccionada].Cells["CATEGORIA"].Value?.ToString();
+                string laboratorio = dgvListado.Rows[filaSeleccionada].Cells["LABORATORIO"].Value?.ToString();
 
-                //frmAgregarProducto frm = new frmAgregarProducto(id, Producto, email, telefono, contacto);
-                //frm.registroAgregado += listarProducto;
-                //mostrarModal.MostrarConCapaTransparente(this, frm);
+                int stock = Convert.ToInt32(dgvListado.Rows[filaSeleccionada].Cells["STOCK"].Value);
+                int stockMinimo = Convert.ToInt32(dgvListado.Rows[filaSeleccionada].Cells["MINIMO"].Value);
+
+                string ventaReceta = dgvListado.Rows[filaSeleccionada].Cells["RECETA"].Value?.ToString();
+                string grabaImpuesto = dgvListado.Rows[filaSeleccionada].Cells["IMPUESTO"].Value?.ToString();
+
+                decimal precioCompra = Convert.ToDecimal(dgvListado.Rows[filaSeleccionada].Cells["P_COMPRA"].Value);
+                decimal precioVenta = Convert.ToDecimal(dgvListado.Rows[filaSeleccionada].Cells["P_VENTA"].Value);
+
+                bool conVencimiento = Convert.ToBoolean(dgvListado.Rows[filaSeleccionada].Cells["tieneVencimiento"].Value);
+
+                DateTime? fechaVencimiento = null;
+
+                if(conVencimiento)
+                {
+                    var fecha = dgvListado.Rows[filaSeleccionada].Cells["VENCIMIENTO"].Value;
+                    if(fecha != null && DateTime.TryParse(fecha.ToString(), out DateTime tempFecha))
+                    {
+                        fechaVencimiento = tempFecha;  
+                    }
+                }
+
+                bool impuesto = grabaImpuesto.Trim() == "G";
+
+
+                AgregarProducto frm = new AgregarProducto(id, codigo, impuesto, producto, formatoCompra, categoria, laboratorio, stock, stockMinimo, ventaReceta, precioCompra, precioVenta, conVencimiento, fechaVencimiento);
+                frm.registroAgregado += listarTodosProducto; ;
+                mostrarModal.MostrarConCapaTransparente(this, frm);
             }
             catch (Exception)
             {
@@ -122,6 +148,44 @@ namespace Sistema.UI.Formularios
             AgregarProducto frm = new AgregarProducto();
             frm.registroAgregado += listarTodosProducto;
             mostrarModal.MostrarConCapaTransparente(this, frm);
+        }
+
+        private void iconEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvListado.CurrentRow != null)
+            {
+                seleccionarRegistros(dgvListado.CurrentRow.Index);
+            }
+        }
+
+        private void iconEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvListado.CurrentRow != null)
+            {
+                EliminarRegistro(dgvListado.CurrentRow.Index);
+            }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvListado.DataSource = bProducto.buscarTodosProducto(1, txtBuscar.Text.Trim());
+                if (dgvListado.Rows.Count > 0)
+                {
+                    iconEditar.Enabled = true;
+                    iconEliminar.Enabled = true;
+                }
+                else
+                {
+                    iconEditar.Enabled = false;
+                    iconEliminar.Enabled = false;
+                }
+            }
+            catch (Exception)
+            {
+                mensaje.mensajeError("Error al buscar registros.");
+            }
         }
     }
 }
