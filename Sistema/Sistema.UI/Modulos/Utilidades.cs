@@ -90,20 +90,23 @@ namespace Sistema.UI.Modulos
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txtControl.Text))
+                var txt = txtControl as Guna.UI2.WinForms.Guna2TextBox;
+                if (txt == null) return;
+
+                if (string.IsNullOrWhiteSpace(txt.Text))
                 {
-                    txtControl.Text = 0m.ToString("N2");
+                    txt.Text = 0m.ToString("N2");
                     return;
                 }
 
-                if (decimal.TryParse(txtControl.Text, out decimal valor))
+                if (decimal.TryParse(txt.Text, out decimal valor))
                 {
-                    txtControl.Text = valor.ToString("N2");
+                    txt.Text = valor.ToString("N2");
                 }
                 else
                 {
                     mensaje.mensajeValidacion("Número inválido.");
-                    txtControl.Focus();
+                    txt.Focus();
                 }
             }
             catch (Exception ex)

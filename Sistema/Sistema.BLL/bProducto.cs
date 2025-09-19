@@ -92,7 +92,7 @@ namespace Sistema.BLL
                 {
                     esValido = false,
                     mensaje = "Seleccione una categoría.",
-                    campoInvalido = "idCategoria"
+                    campoInvalido = "idProducto"
                 };
 
             if (producto.idLaboratorio == 0)
@@ -152,6 +152,106 @@ namespace Sistema.BLL
                 };
 
             return new resultadoOperacion { esValido = true };
+        }
+
+        public static resultadoOperacion registrarProducto(oProducto Producto)
+        {
+            var validacion = validarProducto(Producto);
+            if (!validacion.esValido)
+                return validacion;
+
+            try
+            {
+                bool resultado = productoDal.registrarProducto(Producto);
+
+                if (resultado)
+                {
+                    return new resultadoOperacion
+                    {
+                        esValido = true,
+                        mensaje = "Registro almacenado satisfactoriamente."
+                    };
+                }
+                else
+                {
+                    return new resultadoOperacion
+                    {
+                        esValido = false,
+                        mensaje = "No se puedo crear el registro. Verfique los datos."
+                    };
+                }
+            }
+            catch (Exception)
+            {
+                return new resultadoOperacion
+                {
+                    esValido = false,
+                    mensaje = "Ocurrió un error inesperado al guardar el registro."
+                };
+            }
+        }
+
+        public static resultadoOperacion editarProducto(oProducto Producto)
+        {
+            var validacion = validarProducto(Producto);
+            if (!validacion.esValido)
+                return validacion;
+
+            try
+            {
+                bool resultado = productoDal.edtiarProducto(Producto);
+
+                if (resultado)
+                {
+                    return new resultadoOperacion
+                    {
+                        esValido = true,
+                        mensaje = "Registro actualizado satisfactoriamente."
+                    };
+                }
+                else
+                {
+                    return new resultadoOperacion
+                    {
+                        esValido = false,
+                        mensaje = "No se puedo editar el registro. Verfique los datos."
+                    };
+                }
+            }
+
+            catch (Exception)
+            {
+                return new resultadoOperacion
+                {
+                    esValido = false,
+                    mensaje = "Ocurrió un error inesperado al editar el registro."
+                };
+            }
+        }
+
+        public static string eliminarProducto(int idProducto)
+        {
+            if (idProducto <= 0)
+                return "Debe especificar un registro válido";
+
+            try
+            {
+                bool resultado = productoDal.eliminarProducto(idProducto);
+
+                if (resultado)
+                {
+                    return "Registro eliminado con éxito.";
+                }
+                else
+                {
+                    return "No se puedo eliminar el registro.";
+                }
+            }
+
+            catch (Exception)
+            {
+                throw new ApplicationException("Error inesperado al eliminar el registro.");
+            }
         }
     }
 }

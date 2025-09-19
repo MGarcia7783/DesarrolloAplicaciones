@@ -281,6 +281,7 @@
             this.listadoDeProductosToolStripMenuItem.Name = "listadoDeProductosToolStripMenuItem";
             this.listadoDeProductosToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.listadoDeProductosToolStripMenuItem.Text = "Listado de productos";
+            this.listadoDeProductosToolStripMenuItem.Click += new System.EventHandler(this.listadoDeProductosToolStripMenuItem_Click);
             // 
             // iconInventario
             // 

@@ -126,7 +126,7 @@ namespace Sistema.DAL
             try
             {
                 using (SqlConnection cn = GestorConexion.ObtenerConexion())
-                using (SqlCommand cmd = new SqlCommand("sp_RegistrarProducto", cn))
+                using (SqlCommand cmd = new SqlCommand("sp_RegistrarProductos", cn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -134,10 +134,11 @@ namespace Sistema.DAL
                     cmd.Parameters.AddWithValue("@Impuesto", producto.impuesto);
                     cmd.Parameters.AddWithValue("@Producto", producto.nombreProducto);
                     cmd.Parameters.AddWithValue("@Formato", producto.formatoCompra);
-                    cmd.Parameters.AddWithValue("@IdProducto", producto.idProducto);
+                    cmd.Parameters.AddWithValue("@IdCategoria", producto.idCategoria);
                     cmd.Parameters.AddWithValue("@IdLaboratorio", producto.idLaboratorio);
                     cmd.Parameters.AddWithValue("@Stock", producto.stock);
                     cmd.Parameters.AddWithValue("@StockMinimo", producto.stockMinimo);
+                    cmd.Parameters.AddWithValue("@VentaReceta ", producto.ventaConReceta);
                     cmd.Parameters.AddWithValue("@PrecioCompra", producto.precioCompra);
                     cmd.Parameters.AddWithValue("@PrecioVenta", producto.precioVenta);
                     cmd.Parameters.AddWithValue("@TieneVencimiento", producto.tieneVencimiento);
@@ -184,10 +185,11 @@ namespace Sistema.DAL
                     cmd.Parameters.AddWithValue("@Impuesto", producto.impuesto);
                     cmd.Parameters.AddWithValue("@Producto", producto.nombreProducto);
                     cmd.Parameters.AddWithValue("@Formato", producto.formatoCompra);
-                    cmd.Parameters.AddWithValue("@IdProducto", producto.idProducto);
+                    cmd.Parameters.AddWithValue("@IdCategoria", producto.idCategoria);
                     cmd.Parameters.AddWithValue("@IdLaboratorio", producto.idLaboratorio);
                     cmd.Parameters.AddWithValue("@Stock", producto.stock);
                     cmd.Parameters.AddWithValue("@StockMinimo", producto.stockMinimo);
+                    cmd.Parameters.AddWithValue("@VentaReceta ", producto.ventaConReceta);
                     cmd.Parameters.AddWithValue("@PrecioCompra", producto.precioCompra);
                     cmd.Parameters.AddWithValue("@PrecioVenta", producto.precioVenta);
                     cmd.Parameters.AddWithValue("@TieneVencimiento", producto.tieneVencimiento);
