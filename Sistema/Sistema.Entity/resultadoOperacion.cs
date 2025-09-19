@@ -12,5 +12,6 @@ namespace Sistema.Entity
         public string mensaje { get; set; }
         public string campoInvalido { get; set; }
         public int idCaja { get; set; }
+        public string numeroPedido { get; set; }
     }
 }

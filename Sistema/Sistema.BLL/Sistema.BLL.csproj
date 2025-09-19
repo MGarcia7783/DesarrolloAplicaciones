@@ -44,6 +44,7 @@
     <Compile Include="bCaja.cs" />
     <Compile Include="bCategoria.cs" />
     <Compile Include="bLaboratorio.cs" />
+    <Compile Include="bPedido.cs" />
     <Compile Include="bProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
