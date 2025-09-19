@@ -70,6 +70,12 @@
     <Compile Include="Formularios\AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAbirCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAbirCaja.Designer.cs">
+      <DependentUpon>frmAbirCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmAgregarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,7 @@
     <Compile Include="Modulos\Mensajes.cs" />
     <Compile Include="Modulos\mostrarModal.cs" />
     <Compile Include="Modulos\Utilidades.cs" />
+    <Compile Include="Modulos\Variables.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormulariosBase\frmPlantilla.resx">
@@ -128,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAbirCaja.resx">
+      <DependentUpon>frmAbirCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAgregarCategoria.resx">
       <DependentUpon>frmAgregarCategoria.cs</DependentUpon>

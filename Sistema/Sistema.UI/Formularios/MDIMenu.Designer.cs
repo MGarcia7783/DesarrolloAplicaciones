@@ -183,6 +183,7 @@
             this.aperturaDeCajaToolStripMenuItem.Name = "aperturaDeCajaToolStripMenuItem";
             this.aperturaDeCajaToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
             this.aperturaDeCajaToolStripMenuItem.Text = "Apertura de caja";
+            this.aperturaDeCajaToolStripMenuItem.Click += new System.EventHandler(this.aperturaDeCajaToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -264,12 +265,14 @@
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(231, 6);
+            this.toolStripSeparator4.Visible = false;
             // 
             // listadoDeClientesToolStripMenuItem
             // 
             this.listadoDeClientesToolStripMenuItem.Name = "listadoDeClientesToolStripMenuItem";
             this.listadoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.listadoDeClientesToolStripMenuItem.Text = "Listado de clientes";
+            this.listadoDeClientesToolStripMenuItem.Visible = false;
             // 
             // toolStripSeparator3
             // 

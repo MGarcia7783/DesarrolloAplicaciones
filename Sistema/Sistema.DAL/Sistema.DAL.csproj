@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dCaja.cs" />
     <Compile Include="dCategoria.cs" />
     <Compile Include="dLaboratorio.cs" />
     <Compile Include="dProducto.cs" />

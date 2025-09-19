@@ -1,4 +1,6 @@
-﻿using Sistema.UI.Modulos;
+﻿using Sistema.BLL;
+using Sistema.UI.FormulariosBase;
+using Sistema.UI.Modulos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Sistema.UI.FormulariosBase;
 
 namespace Sistema.UI.Formularios
 {
@@ -90,6 +91,28 @@ namespace Sistema.UI.Formularios
             }
         }
 
+        private void buscarCaja()
+        {
+            try
+            {
+                var cajaAbierta = bCaja.buscarCaja(Variables.idUsuario);
+                if (cajaAbierta.Rows.Count == 0)
+                {
+                    frmAbirCaja frm = new frmAbirCaja(true);
+                    mostrarModal.MostrarConCapaTransparente(this, frm);
+                    toolCaja.Text = "Caja: " + Variables.idCaja;
+                }
+                else
+                {
+                    toolCaja.Text = "Caja: " + cajaAbierta.Rows[0]["CAJA"].ToString();
+                }
+            }
+            catch (Exception)
+            {
+                mensaje.mensajeError("Ocurrió un error al verificar el estado de la caja.");
+            }
+        }
+
         #endregion
 
         #region Eventos del Formulario
@@ -97,6 +120,7 @@ namespace Sistema.UI.Formularios
         private void MDIMenu_Load(object sender, EventArgs e)
         {
             centrarEtiquetas();
+            buscarCaja();
         }
 
         private void MDIMenu_Resize(object sender, EventArgs e)
@@ -145,8 +169,12 @@ namespace Sistema.UI.Formularios
             AbrirFormulario(new frmProductos(), true);
         }
 
+        private void aperturaDeCajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAbirCaja frm = new frmAbirCaja(false);
+            mostrarModal.MostrarConCapaTransparente(this, frm);
+        }
+
         #endregion
-
-
     }
 }

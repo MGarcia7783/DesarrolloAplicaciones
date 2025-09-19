@@ -11,5 +11,6 @@ namespace Sistema.Entity
         public bool esValido { get; set; }
         public string mensaje { get; set; }
         public string campoInvalido { get; set; }
+        public int idCaja { get; set; }
     }
 }

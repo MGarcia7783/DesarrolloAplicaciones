@@ -231,6 +231,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.label1.Size = new System.Drawing.Size(508, 66);
             this.label1.TabIndex = 6;
             this.label1.Text = "Registro de Categorías";
