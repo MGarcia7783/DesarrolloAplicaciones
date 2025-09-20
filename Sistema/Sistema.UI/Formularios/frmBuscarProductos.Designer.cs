@@ -257,6 +257,7 @@
             this.Controls.Add(this.dgvListado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBuscarProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmBuscarProductos";
             ((System.ComponentModel.ISupportInitialize)(this.iconSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
