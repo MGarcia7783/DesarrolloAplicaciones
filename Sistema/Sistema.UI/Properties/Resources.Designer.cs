@@ -63,6 +63,26 @@ namespace Sistema.UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap error_404 {
+            get {
+                object obj = ResourceManager.GetObject("error_404", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_add_50 {
+            get {
+                object obj = ResourceManager.GetObject("icon_add_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_confirm_50 {
             get {
                 object obj = ResourceManager.GetObject("icon_confirm_50", resourceCulture);
@@ -133,9 +153,29 @@ namespace Sistema.UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_print_48 {
+            get {
+                object obj = ResourceManager.GetObject("icon_print_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_salida_48 {
             get {
                 object obj = ResourceManager.GetObject("icon_salida_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_save_48 {
+            get {
+                object obj = ResourceManager.GetObject("icon_save_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

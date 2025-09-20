@@ -151,7 +151,7 @@ namespace Sistema.UI.Formularios
 
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new frmPlantilla(), true);
+            AbrirFormulario(new frmPedidos(), true);
         }
 
         private void listadoDeLaboratoriosToolStripMenuItem_Click(object sender, EventArgs e)

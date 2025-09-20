@@ -162,10 +162,10 @@
             this.iconVentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aperturaDeCajaToolStripMenuItem,
             this.toolStripSeparator1,
-            this.cerrarCajaToolStripMenuItem,
             this.ventasToolStripMenuItem,
             this.historialDeVentasToolStripMenuItem,
             this.toolStripSeparator2,
+            this.cerrarCajaToolStripMenuItem,
             this.cierToolStripMenuItem});
             this.iconVentas.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconVentas.IconChar = FontAwesome.Sharp.IconChar.DollyFlatbed;

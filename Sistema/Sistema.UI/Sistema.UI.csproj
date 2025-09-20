@@ -39,11 +39,15 @@
     <Reference Include="Guna.UI2">
       <HintPath>..\..\Recursos\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Klik.Windows.Forms.EntryLib.V2.2005">
+      <HintPath>..\..\..\..\..\..\Desarrollo de Aplicaciones II\2025\Regular\Semana 5\Recursos\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Libreria\Klik.Windows.Forms.EntryLib.V2.2005.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -88,6 +92,12 @@
     <Compile Include="Formularios\frmAgregarLaboratorio.Designer.cs">
       <DependentUpon>frmAgregarLaboratorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmBuscarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmBuscarProductos.Designer.cs">
+      <DependentUpon>frmBuscarProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,11 +122,23 @@
     <Compile Include="Formularios\frmMensajes.Designer.cs">
       <DependentUpon>frmMensajes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPedidos.Designer.cs">
+      <DependentUpon>frmPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmProductos.Designer.cs">
       <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmTerminarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmTerminarPedido.Designer.cs">
+      <DependentUpon>frmTerminarPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\MDIMenu.cs">
       <SubType>Form</SubType>
@@ -145,6 +167,9 @@
     <EmbeddedResource Include="Formularios\frmAgregarLaboratorio.resx">
       <DependentUpon>frmAgregarLaboratorio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmBuscarProductos.resx">
+      <DependentUpon>frmBuscarProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCategorias.resx">
       <DependentUpon>frmCategorias.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,12 +182,19 @@
     <EmbeddedResource Include="Formularios\frmMensajes.resx">
       <DependentUpon>frmMensajes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPedidos.resx">
+      <DependentUpon>frmPedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmTerminarPedido.resx">
+      <DependentUpon>frmTerminarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\MDIMenu.resx">
       <DependentUpon>MDIMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -233,6 +265,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_salida_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_add_50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_save_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_print_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_404.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
