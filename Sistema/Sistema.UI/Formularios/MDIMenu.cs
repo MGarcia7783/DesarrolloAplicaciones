@@ -175,6 +175,13 @@ namespace Sistema.UI.Formularios
             mostrarModal.MostrarConCapaTransparente(this, frm);
         }
 
+        private void historialDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmHistorialPedidos(), true);
+        }
+
         #endregion
+
+
     }
 }

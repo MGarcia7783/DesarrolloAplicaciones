@@ -110,6 +110,18 @@
     <Compile Include="Formularios\frmConexion.Designer.cs">
       <DependentUpon>frmConexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmDetalles.Designer.cs">
+      <DependentUpon>frmDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmHistorialPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmHistorialPedidos.Designer.cs">
+      <DependentUpon>frmHistorialPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmLaboratorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +187,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConexion.resx">
       <DependentUpon>frmConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmDetalles.resx">
+      <DependentUpon>frmDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmHistorialPedidos.resx">
+      <DependentUpon>frmHistorialPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLaboratorio.resx">
       <DependentUpon>frmLaboratorio.cs</DependentUpon>
@@ -277,6 +295,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\error_404.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_buscar_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_actualizar_48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

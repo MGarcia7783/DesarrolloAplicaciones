@@ -64,6 +64,33 @@ namespace Sistema.DAL
             return lista;
         }
 
+        public DataTable buscarDetallePedido(int id)
+        {
+            DataTable lista = new DataTable();
+
+            try
+            {
+                using (SqlConnection cn = GestorConexion.ObtenerConexion())
+                using (SqlCommand cmd = new SqlCommand("sp_BuscarDetallePedidos", cn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@IdPedido", id);
+                    cn.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        lista.Load(dr);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Error al cargar registros.");
+            }
+
+            return lista;
+        }
+
         public bool registrarPedido(oPedido pedido, out string pedidoGenerado)
         {
             pedidoGenerado = string.Empty;

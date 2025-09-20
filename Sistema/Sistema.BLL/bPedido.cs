@@ -37,6 +37,18 @@ namespace Sistema.BLL
             }
         }
 
+        public static DataTable buscarDetallePedido(int id)
+        {
+            try
+            {
+                return pedidoDal.buscarDetallePedido(id);
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Error al buscar registros.");
+            }
+        }
+
         private static resultadoOperacion validarPedido(oPedido pedido)
         {
             if (pedido.detalles == null || pedido.detalles.Rows.Count == 0)

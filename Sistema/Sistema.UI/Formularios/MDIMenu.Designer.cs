@@ -40,10 +40,10 @@
             this.iconVentas = new FontAwesome.Sharp.IconDropDownButton();
             this.aperturaDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.cerrarCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.cerrarCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iconCatalogo = new FontAwesome.Sharp.IconDropDownButton();
             this.listadoDeLaboratoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -190,12 +190,6 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(201, 6);
             // 
-            // cerrarCajaToolStripMenuItem
-            // 
-            this.cerrarCajaToolStripMenuItem.Name = "cerrarCajaToolStripMenuItem";
-            this.cerrarCajaToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
-            this.cerrarCajaToolStripMenuItem.Text = "Cerrar caja";
-            // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
@@ -208,11 +202,18 @@
             this.historialDeVentasToolStripMenuItem.Name = "historialDeVentasToolStripMenuItem";
             this.historialDeVentasToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
             this.historialDeVentasToolStripMenuItem.Text = "Historial de ventas";
+            this.historialDeVentasToolStripMenuItem.Click += new System.EventHandler(this.historialDeVentasToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(201, 6);
+            // 
+            // cerrarCajaToolStripMenuItem
+            // 
+            this.cerrarCajaToolStripMenuItem.Name = "cerrarCajaToolStripMenuItem";
+            this.cerrarCajaToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
+            this.cerrarCajaToolStripMenuItem.Text = "Cerrar caja";
             // 
             // cierToolStripMenuItem
             // 
