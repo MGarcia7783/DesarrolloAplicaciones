@@ -39,12 +39,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotalVenta = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEfectivo = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTarjeta = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCambio = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.iconCancelar = new FontAwesome.Sharp.IconButton();
             this.iconAceptar = new FontAwesome.Sharp.IconButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +72,8 @@
             // chkEfectivo
             // 
             this.chkEfectivo.AutoSize = true;
+            this.chkEfectivo.Checked = true;
+            this.chkEfectivo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkEfectivo.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkEfectivo.Location = new System.Drawing.Point(165, 93);
             this.chkEfectivo.Name = "chkEfectivo";
@@ -78,6 +81,7 @@
             this.chkEfectivo.TabIndex = 9;
             this.chkEfectivo.Text = "Efectivo";
             this.chkEfectivo.UseVisualStyleBackColor = true;
+            this.chkEfectivo.CheckedChanged += new System.EventHandler(this.chkEfectivo_CheckedChanged);
             // 
             // chkTarjeta
             // 
@@ -89,6 +93,7 @@
             this.chkTarjeta.TabIndex = 10;
             this.chkTarjeta.Text = "Tarjeta";
             this.chkTarjeta.UseVisualStyleBackColor = true;
+            this.chkTarjeta.CheckedChanged += new System.EventHandler(this.chkTarjeta_CheckedChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -100,9 +105,9 @@
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtTotalVenta, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.guna2TextBox2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.guna2TextBox3, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.guna2TextBox4, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtEfectivo, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtTarjeta, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtCambio, 1, 3);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(23, 138);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -187,90 +192,96 @@
             this.txtTotalVenta.TabIndex = 4;
             this.txtTotalVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // guna2TextBox2
+            // txtEfectivo
             // 
-            this.guna2TextBox2.BorderRadius = 8;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "0.00";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(142, 52);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.SelectionStart = 4;
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(235, 36);
-            this.guna2TextBox2.TabIndex = 5;
-            this.guna2TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtEfectivo.BorderRadius = 8;
+            this.txtEfectivo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEfectivo.DefaultText = "0.00";
+            this.txtEfectivo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEfectivo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEfectivo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEfectivo.DisabledState.Parent = this.txtEfectivo;
+            this.txtEfectivo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEfectivo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEfectivo.FocusedState.Parent = this.txtEfectivo;
+            this.txtEfectivo.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEfectivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEfectivo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEfectivo.HoverState.Parent = this.txtEfectivo;
+            this.txtEfectivo.Location = new System.Drawing.Point(142, 52);
+            this.txtEfectivo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEfectivo.Name = "txtEfectivo";
+            this.txtEfectivo.PasswordChar = '\0';
+            this.txtEfectivo.PlaceholderText = "";
+            this.txtEfectivo.SelectedText = "";
+            this.txtEfectivo.SelectionStart = 4;
+            this.txtEfectivo.ShadowDecoration.Parent = this.txtEfectivo;
+            this.txtEfectivo.Size = new System.Drawing.Size(235, 36);
+            this.txtEfectivo.TabIndex = 5;
+            this.txtEfectivo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtEfectivo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEfectivo_KeyDown);
+            this.txtEfectivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEfectivo_KeyPress);
+            this.txtEfectivo.Leave += new System.EventHandler(this.txtEfectivo_Leave);
             // 
-            // guna2TextBox3
+            // txtTarjeta
             // 
-            this.guna2TextBox3.BorderRadius = 8;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "0.00";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(142, 99);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.SelectionStart = 4;
-            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(235, 36);
-            this.guna2TextBox3.TabIndex = 6;
-            this.guna2TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTarjeta.BorderRadius = 8;
+            this.txtTarjeta.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTarjeta.DefaultText = "0.00";
+            this.txtTarjeta.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTarjeta.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTarjeta.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTarjeta.DisabledState.Parent = this.txtTarjeta;
+            this.txtTarjeta.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTarjeta.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTarjeta.FocusedState.Parent = this.txtTarjeta;
+            this.txtTarjeta.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTarjeta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTarjeta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTarjeta.HoverState.Parent = this.txtTarjeta;
+            this.txtTarjeta.Location = new System.Drawing.Point(142, 99);
+            this.txtTarjeta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTarjeta.Name = "txtTarjeta";
+            this.txtTarjeta.PasswordChar = '\0';
+            this.txtTarjeta.PlaceholderText = "";
+            this.txtTarjeta.SelectedText = "";
+            this.txtTarjeta.SelectionStart = 4;
+            this.txtTarjeta.ShadowDecoration.Parent = this.txtTarjeta;
+            this.txtTarjeta.Size = new System.Drawing.Size(235, 36);
+            this.txtTarjeta.TabIndex = 6;
+            this.txtTarjeta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTarjeta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTarjeta_KeyDown);
+            this.txtTarjeta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTarjeta_KeyPress);
+            this.txtTarjeta.Leave += new System.EventHandler(this.txtTarjeta_Leave);
             // 
-            // guna2TextBox4
+            // txtCambio
             // 
-            this.guna2TextBox4.BorderRadius = 8;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "0.00";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Location = new System.Drawing.Point(142, 146);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "";
-            this.guna2TextBox4.ReadOnly = true;
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.SelectionStart = 4;
-            this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Size = new System.Drawing.Size(235, 36);
-            this.guna2TextBox4.TabIndex = 7;
-            this.guna2TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCambio.BorderRadius = 8;
+            this.txtCambio.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCambio.DefaultText = "0.00";
+            this.txtCambio.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCambio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCambio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCambio.DisabledState.Parent = this.txtCambio;
+            this.txtCambio.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCambio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCambio.FocusedState.Parent = this.txtCambio;
+            this.txtCambio.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCambio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCambio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCambio.HoverState.Parent = this.txtCambio;
+            this.txtCambio.Location = new System.Drawing.Point(142, 146);
+            this.txtCambio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCambio.Name = "txtCambio";
+            this.txtCambio.PasswordChar = '\0';
+            this.txtCambio.PlaceholderText = "";
+            this.txtCambio.ReadOnly = true;
+            this.txtCambio.SelectedText = "";
+            this.txtCambio.SelectionStart = 4;
+            this.txtCambio.ShadowDecoration.Parent = this.txtCambio;
+            this.txtCambio.Size = new System.Drawing.Size(235, 36);
+            this.txtCambio.TabIndex = 7;
+            this.txtCambio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tableLayoutPanel2
             // 
@@ -306,14 +317,16 @@
             this.iconCancelar.TabIndex = 2;
             this.iconCancelar.Text = "Cancelar";
             this.iconCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.iconCancelar, "Cerrar ventana");
             this.iconCancelar.UseVisualStyleBackColor = true;
+            this.iconCancelar.Click += new System.EventHandler(this.iconCancelar_Click);
             // 
             // iconAceptar
             // 
             this.iconAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconAceptar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.iconAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconAceptar.IconChar = FontAwesome.Sharp.IconChar.CircleCheck;
+            this.iconAceptar.IconChar = FontAwesome.Sharp.IconChar.Print;
             this.iconAceptar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconAceptar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconAceptar.IconSize = 30;
@@ -325,7 +338,9 @@
             this.iconAceptar.TabIndex = 0;
             this.iconAceptar.Text = "Aceptar";
             this.iconAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.iconAceptar, "Imprimir recibo");
             this.iconAceptar.UseVisualStyleBackColor = true;
+            this.iconAceptar.Click += new System.EventHandler(this.iconAceptar_Click);
             // 
             // frmTerminarPedido
             // 
@@ -339,9 +354,11 @@
             this.Controls.Add(this.chkEfectivo);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "frmTerminarPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTerminarPedido";
+            this.Load += new System.EventHandler(this.frmTerminarPedido_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -362,11 +379,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalVenta;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox txtEfectivo;
+        private Guna.UI2.WinForms.Guna2TextBox txtTarjeta;
+        private Guna.UI2.WinForms.Guna2TextBox txtCambio;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private FontAwesome.Sharp.IconButton iconCancelar;
         private FontAwesome.Sharp.IconButton iconAceptar;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
