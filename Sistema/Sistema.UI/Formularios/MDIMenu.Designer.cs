@@ -221,6 +221,7 @@
             this.cierToolStripMenuItem.Name = "cierToolStripMenuItem";
             this.cierToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
             this.cierToolStripMenuItem.Text = "Ver cierre de caja";
+            this.cierToolStripMenuItem.Click += new System.EventHandler(this.cierToolStripMenuItem_Click);
             // 
             // iconCatalogo
             // 

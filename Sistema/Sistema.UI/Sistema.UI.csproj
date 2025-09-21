@@ -134,6 +134,12 @@
     <Compile Include="Formularios\frmLaboratorio.Designer.cs">
       <DependentUpon>frmLaboratorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmListarCierreCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmListarCierreCaja.Designer.cs">
+      <DependentUpon>frmListarCierreCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmMensajes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLaboratorio.resx">
       <DependentUpon>frmLaboratorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmListarCierreCaja.resx">
+      <DependentUpon>frmListarCierreCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMensajes.resx">
       <DependentUpon>frmMensajes.cs</DependentUpon>

@@ -14,11 +14,35 @@ namespace Sistema.BLL
     {
         private static readonly dCaja cajaDal = new dCaja();
 
+        public static DataTable ListarCaja()
+        {
+            try
+            {
+                return cajaDal.listarCaja();
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Error al cargar registros.");
+            }
+        }
+
         public static DataTable buscarCaja(int idUsuario)
         {
             try
             {
                 return cajaDal.buscarCaja(idUsuario);
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Error al buscar registros.");
+            }
+        }
+
+        public static DataTable buscarCajaPorFecha(DateTime fechaInicio, DateTime fechaFinal)
+        {
+            try
+            {
+                return cajaDal.buscarCajaPorFecja(fechaInicio, fechaFinal);
             }
             catch (Exception)
             {

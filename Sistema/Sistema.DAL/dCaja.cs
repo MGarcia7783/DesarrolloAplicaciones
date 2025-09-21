@@ -11,6 +11,32 @@ namespace Sistema.DAL
 {
     public class dCaja
     {
+        public DataTable listarCaja()
+        {
+            DataTable lista = new DataTable();
+
+            try
+            {
+                using (SqlConnection cn = GestorConexion.ObtenerConexion())
+                using (SqlCommand cmd = new SqlCommand("sp_ListarCaja", cn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cn.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        lista.Load(dr);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Error al cargar los registros.");
+            }
+
+            return lista;
+        }
+
         public DataTable buscarCaja(int idUsuario)
         {
             DataTable lista = new DataTable();
@@ -22,6 +48,34 @@ namespace Sistema.DAL
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    cn.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        lista.Load(dr);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Error al buscar los registros.");
+            }
+
+            return lista;
+        }
+
+        public DataTable buscarCajaPorFecja(DateTime fechInicio, DateTime fechaFinal)
+        {
+            DataTable lista = new DataTable();
+
+            try
+            {
+                using (SqlConnection cn = GestorConexion.ObtenerConexion())
+                using (SqlCommand cmd = new SqlCommand("sp_BuscarCajaporFecha", cn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@FechaInicio", fechInicio);
+                    cmd.Parameters.AddWithValue("@FechaFinal", fechaFinal);
                     cn.Open();
 
                     using (SqlDataReader dr = cmd.ExecuteReader())
