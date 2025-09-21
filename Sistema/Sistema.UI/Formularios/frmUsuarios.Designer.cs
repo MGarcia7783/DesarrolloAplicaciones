@@ -51,6 +51,15 @@
             this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBuscar.HoverState.Parent = this.txtBuscar;
             this.txtBuscar.ShadowDecoration.Parent = this.txtBuscar;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // iconEliminar
+            // 
+            this.iconEliminar.Click += new System.EventHandler(this.iconEliminar_Click);
+            // 
+            // iconEditar
+            // 
+            this.iconEditar.Click += new System.EventHandler(this.iconEditar_Click);
             // 
             // iconAgregar
             // 
@@ -63,6 +72,7 @@
             this.ClientSize = new System.Drawing.Size(1189, 591);
             this.Name = "frmUsuarios";
             this.Text = "frmUsuarios";
+            this.Load += new System.EventHandler(this.frmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconEditar)).EndInit();

@@ -32,25 +32,25 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.iconCancelar = new FontAwesome.Sharp.IconButton();
+            this.iconAceptar = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCodigo = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIdentificacion = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCodigo = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.chkMostrar = new System.Windows.Forms.CheckBox();
+            this.cboRol = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtClave = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cboRol = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.chkMostrar = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.iconCancelar = new FontAwesome.Sharp.IconButton();
-            this.iconAceptar = new FontAwesome.Sharp.IconButton();
             this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.panel1.SuspendLayout();
@@ -66,6 +66,48 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
+            // 
+            // iconCancelar
+            // 
+            this.iconCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconCancelar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconCancelar.IconChar = FontAwesome.Sharp.IconChar.CircleXmark;
+            this.iconCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCancelar.IconSize = 30;
+            this.iconCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconCancelar.Location = new System.Drawing.Point(321, 3);
+            this.iconCancelar.Name = "iconCancelar";
+            this.iconCancelar.Padding = new System.Windows.Forms.Padding(5);
+            this.iconCancelar.Size = new System.Drawing.Size(120, 44);
+            this.iconCancelar.TabIndex = 2;
+            this.iconCancelar.Text = "Cancelar";
+            this.iconCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.iconCancelar, "Cerrar ventana");
+            this.iconCancelar.UseVisualStyleBackColor = true;
+            this.iconCancelar.Click += new System.EventHandler(this.iconCancelar_Click);
+            // 
+            // iconAceptar
+            // 
+            this.iconAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconAceptar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconAceptar.IconChar = FontAwesome.Sharp.IconChar.CircleCheck;
+            this.iconAceptar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconAceptar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconAceptar.IconSize = 30;
+            this.iconAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconAceptar.Location = new System.Drawing.Point(195, 3);
+            this.iconAceptar.Name = "iconAceptar";
+            this.iconAceptar.Padding = new System.Windows.Forms.Padding(5);
+            this.iconAceptar.Size = new System.Drawing.Size(120, 44);
+            this.iconAceptar.TabIndex = 0;
+            this.iconAceptar.Text = "Aceptar";
+            this.iconAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.iconAceptar, "Grabar registro");
+            this.iconAceptar.UseVisualStyleBackColor = true;
+            this.iconAceptar.Click += new System.EventHandler(this.iconAceptar_Click);
             // 
             // label1
             // 
@@ -94,6 +136,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(460, 262);
             this.panel1.TabIndex = 9;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.BorderRadius = 6;
+            this.txtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCodigo.DefaultText = "";
+            this.txtCodigo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCodigo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCodigo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigo.DisabledState.Parent = this.txtCodigo;
+            this.txtCodigo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCodigo.FocusedState.Parent = this.txtCodigo;
+            this.txtCodigo.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCodigo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCodigo.HoverState.Parent = this.txtCodigo;
+            this.txtCodigo.Location = new System.Drawing.Point(15, 198);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.PasswordChar = '\0';
+            this.txtCodigo.PlaceholderText = "";
+            this.txtCodigo.SelectedText = "";
+            this.txtCodigo.ShadowDecoration.Parent = this.txtCodigo;
+            this.txtCodigo.Size = new System.Drawing.Size(415, 36);
+            this.txtCodigo.TabIndex = 10;
             // 
             // txtUsuario
             // 
@@ -177,32 +245,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Identificación";
             // 
-            // txtCodigo
-            // 
-            this.txtCodigo.BorderRadius = 6;
-            this.txtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCodigo.DefaultText = "";
-            this.txtCodigo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCodigo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCodigo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCodigo.DisabledState.Parent = this.txtCodigo;
-            this.txtCodigo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCodigo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigo.FocusedState.Parent = this.txtCodigo;
-            this.txtCodigo.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCodigo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigo.HoverState.Parent = this.txtCodigo;
-            this.txtCodigo.Location = new System.Drawing.Point(15, 198);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.PasswordChar = '\0';
-            this.txtCodigo.PlaceholderText = "";
-            this.txtCodigo.SelectedText = "";
-            this.txtCodigo.ShadowDecoration.Parent = this.txtCodigo;
-            this.txtCodigo.Size = new System.Drawing.Size(415, 36);
-            this.txtCodigo.TabIndex = 10;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.chkMostrar);
@@ -217,6 +259,39 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(460, 262);
             this.panel2.TabIndex = 11;
+            // 
+            // chkMostrar
+            // 
+            this.chkMostrar.AutoSize = true;
+            this.chkMostrar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMostrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.chkMostrar.Location = new System.Drawing.Point(356, 171);
+            this.chkMostrar.Name = "chkMostrar";
+            this.chkMostrar.Size = new System.Drawing.Size(75, 21);
+            this.chkMostrar.TabIndex = 12;
+            this.chkMostrar.Text = "Mostrar";
+            this.chkMostrar.UseVisualStyleBackColor = true;
+            this.chkMostrar.CheckedChanged += new System.EventHandler(this.chkMostrar_CheckedChanged);
+            // 
+            // cboRol
+            // 
+            this.cboRol.BackColor = System.Drawing.Color.Transparent;
+            this.cboRol.BorderRadius = 6;
+            this.cboRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboRol.FocusedColor = System.Drawing.Color.Empty;
+            this.cboRol.FocusedState.Parent = this.cboRol;
+            this.cboRol.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cboRol.FormattingEnabled = true;
+            this.cboRol.HoverState.Parent = this.cboRol;
+            this.cboRol.ItemHeight = 30;
+            this.cboRol.ItemsAppearance.Parent = this.cboRol;
+            this.cboRol.Location = new System.Drawing.Point(15, 117);
+            this.cboRol.Name = "cboRol";
+            this.cboRol.ShadowDecoration.Parent = this.cboRol;
+            this.cboRol.Size = new System.Drawing.Size(416, 36);
+            this.cboRol.TabIndex = 12;
             // 
             // txtClave
             // 
@@ -300,38 +375,6 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Email";
             // 
-            // cboRol
-            // 
-            this.cboRol.BackColor = System.Drawing.Color.Transparent;
-            this.cboRol.BorderRadius = 6;
-            this.cboRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRol.FocusedColor = System.Drawing.Color.Empty;
-            this.cboRol.FocusedState.Parent = this.cboRol;
-            this.cboRol.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cboRol.FormattingEnabled = true;
-            this.cboRol.HoverState.Parent = this.cboRol;
-            this.cboRol.ItemHeight = 30;
-            this.cboRol.ItemsAppearance.Parent = this.cboRol;
-            this.cboRol.Location = new System.Drawing.Point(15, 117);
-            this.cboRol.Name = "cboRol";
-            this.cboRol.ShadowDecoration.Parent = this.cboRol;
-            this.cboRol.Size = new System.Drawing.Size(416, 36);
-            this.cboRol.TabIndex = 12;
-            // 
-            // chkMostrar
-            // 
-            this.chkMostrar.AutoSize = true;
-            this.chkMostrar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMostrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.chkMostrar.Location = new System.Drawing.Point(356, 171);
-            this.chkMostrar.Name = "chkMostrar";
-            this.chkMostrar.Size = new System.Drawing.Size(75, 21);
-            this.chkMostrar.TabIndex = 12;
-            this.chkMostrar.Text = "Mostrar";
-            this.chkMostrar.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 4;
@@ -349,47 +392,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(470, 50);
             this.tableLayoutPanel2.TabIndex = 12;
-            // 
-            // iconCancelar
-            // 
-            this.iconCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconCancelar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconCancelar.IconChar = FontAwesome.Sharp.IconChar.CircleXmark;
-            this.iconCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCancelar.IconSize = 30;
-            this.iconCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconCancelar.Location = new System.Drawing.Point(321, 3);
-            this.iconCancelar.Name = "iconCancelar";
-            this.iconCancelar.Padding = new System.Windows.Forms.Padding(5);
-            this.iconCancelar.Size = new System.Drawing.Size(120, 44);
-            this.iconCancelar.TabIndex = 2;
-            this.iconCancelar.Text = "Cancelar";
-            this.iconCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.iconCancelar, "Cerrar ventana");
-            this.iconCancelar.UseVisualStyleBackColor = true;
-            this.iconCancelar.Click += new System.EventHandler(this.iconCancelar_Click);
-            // 
-            // iconAceptar
-            // 
-            this.iconAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconAceptar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconAceptar.IconChar = FontAwesome.Sharp.IconChar.CircleCheck;
-            this.iconAceptar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconAceptar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconAceptar.IconSize = 30;
-            this.iconAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconAceptar.Location = new System.Drawing.Point(195, 3);
-            this.iconAceptar.Name = "iconAceptar";
-            this.iconAceptar.Padding = new System.Windows.Forms.Padding(5);
-            this.iconAceptar.Size = new System.Drawing.Size(120, 44);
-            this.iconAceptar.TabIndex = 0;
-            this.iconAceptar.Text = "Aceptar";
-            this.iconAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.iconAceptar, "Grabar registro");
-            this.iconAceptar.UseVisualStyleBackColor = true;
             // 
             // txtId
             // 

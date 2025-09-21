@@ -210,6 +210,13 @@ namespace Sistema.UI.Formularios
         {
             AbrirFormulario(new frmUsuarios(), true);
         }
+
+        private void conexiónALaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConexion frm = new frmConexion();
+            mostrarModal.MostrarConCapaTransparente(this, frm);
+        }
+
         #endregion
 
 

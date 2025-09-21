@@ -368,6 +368,7 @@
             this.conexiónALaBaseDeDatosToolStripMenuItem.Name = "conexiónALaBaseDeDatosToolStripMenuItem";
             this.conexiónALaBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(268, 24);
             this.conexiónALaBaseDeDatosToolStripMenuItem.Text = "Conexión a la base de datos";
+            this.conexiónALaBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.conexiónALaBaseDeDatosToolStripMenuItem_Click);
             // 
             // backupDeLaBaseDeDatosToolStripMenuItem
             // 
