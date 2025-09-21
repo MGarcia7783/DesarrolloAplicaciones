@@ -1,6 +1,6 @@
 ﻿namespace Sistema.UI.Formularios
 {
-    partial class frmListarCierreCaja
+    partial class frmHistorialCompras
     {
         /// <summary>
         /// Required designer variable.
@@ -35,22 +35,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconBuscar = new System.Windows.Forms.PictureBox();
-            this.iconActualizar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFechaFinal = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpFechaInicio = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.iconCerrar = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvListado = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.iconBuscar = new System.Windows.Forms.PictureBox();
+            this.iconActualizar = new System.Windows.Forms.PictureBox();
+            this.iconCerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconActualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -72,36 +72,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1189, 113);
-            this.panel1.TabIndex = 2;
-            // 
-            // iconBuscar
-            // 
-            this.iconBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconBuscar.Image = global::Sistema.UI.Properties.Resources.icon_buscar_48;
-            this.iconBuscar.Location = new System.Drawing.Point(978, 35);
-            this.iconBuscar.Name = "iconBuscar";
-            this.iconBuscar.Size = new System.Drawing.Size(42, 42);
-            this.iconBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconBuscar.TabIndex = 11;
-            this.iconBuscar.TabStop = false;
-            this.iconBuscar.Tag = "";
-            this.toolTip1.SetToolTip(this.iconBuscar, "Buscar registro");
-            this.iconBuscar.Click += new System.EventHandler(this.iconBuscar_Click);
-            // 
-            // iconActualizar
-            // 
-            this.iconActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconActualizar.Image = global::Sistema.UI.Properties.Resources.icon_actualizar_48;
-            this.iconActualizar.Location = new System.Drawing.Point(1045, 35);
-            this.iconActualizar.Name = "iconActualizar";
-            this.iconActualizar.Size = new System.Drawing.Size(42, 42);
-            this.iconActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconActualizar.TabIndex = 10;
-            this.iconActualizar.TabStop = false;
-            this.toolTip1.SetToolTip(this.iconActualizar, "Actualizar lista");
-            this.iconActualizar.Click += new System.EventHandler(this.iconActualizar_Click);
+            this.panel1.TabIndex = 4;
             // 
             // label2
             // 
@@ -165,20 +136,6 @@
             this.dtpFechaInicio.TabIndex = 6;
             this.dtpFechaInicio.Value = new System.DateTime(2025, 9, 20, 18, 33, 10, 742);
             // 
-            // iconCerrar
-            // 
-            this.iconCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconCerrar.Image = global::Sistema.UI.Properties.Resources.icon_salida_48;
-            this.iconCerrar.Location = new System.Drawing.Point(1108, 35);
-            this.iconCerrar.Name = "iconCerrar";
-            this.iconCerrar.Size = new System.Drawing.Size(42, 42);
-            this.iconCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconCerrar.TabIndex = 5;
-            this.iconCerrar.TabStop = false;
-            this.toolTip1.SetToolTip(this.iconCerrar, "Cerrar ventana");
-            this.iconCerrar.Click += new System.EventHandler(this.iconCerrar_Click);
-            // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
@@ -186,9 +143,9 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(13, 38);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(246, 37);
+            this.lblTitulo.Size = new System.Drawing.Size(299, 37);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Explorador de Caja";
+            this.lblTitulo.Text = "Histororial de Compras";
             // 
             // dgvListado
             // 
@@ -242,7 +199,7 @@
             this.dgvListado.RowTemplate.Height = 35;
             this.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListado.Size = new System.Drawing.Size(1144, 440);
-            this.dgvListado.TabIndex = 3;
+            this.dgvListado.TabIndex = 5;
             this.dgvListado.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvListado.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvListado.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -265,13 +222,57 @@
             this.dgvListado.ThemeStyle.RowsStyle.Height = 35;
             this.dgvListado.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvListado.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvListado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListado_CellDoubleClick);
             // 
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 15;
             this.guna2Elipse2.TargetControl = this.dgvListado;
             // 
-            // frmListarCierreCaja
+            // iconBuscar
+            // 
+            this.iconBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconBuscar.Image = global::Sistema.UI.Properties.Resources.icon_buscar_48;
+            this.iconBuscar.Location = new System.Drawing.Point(978, 35);
+            this.iconBuscar.Name = "iconBuscar";
+            this.iconBuscar.Size = new System.Drawing.Size(42, 42);
+            this.iconBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconBuscar.TabIndex = 11;
+            this.iconBuscar.TabStop = false;
+            this.iconBuscar.Tag = "";
+            this.toolTip1.SetToolTip(this.iconBuscar, "Buscar registro");
+            this.iconBuscar.Click += new System.EventHandler(this.iconBuscar_Click);
+            // 
+            // iconActualizar
+            // 
+            this.iconActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconActualizar.Image = global::Sistema.UI.Properties.Resources.icon_actualizar_48;
+            this.iconActualizar.Location = new System.Drawing.Point(1045, 35);
+            this.iconActualizar.Name = "iconActualizar";
+            this.iconActualizar.Size = new System.Drawing.Size(42, 42);
+            this.iconActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconActualizar.TabIndex = 10;
+            this.iconActualizar.TabStop = false;
+            this.toolTip1.SetToolTip(this.iconActualizar, "Actualizar lista");
+            this.iconActualizar.Click += new System.EventHandler(this.iconActualizar_Click);
+            // 
+            // iconCerrar
+            // 
+            this.iconCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconCerrar.Image = global::Sistema.UI.Properties.Resources.icon_salida_48;
+            this.iconCerrar.Location = new System.Drawing.Point(1108, 35);
+            this.iconCerrar.Name = "iconCerrar";
+            this.iconCerrar.Size = new System.Drawing.Size(42, 42);
+            this.iconCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconCerrar.TabIndex = 5;
+            this.iconCerrar.TabStop = false;
+            this.toolTip1.SetToolTip(this.iconCerrar, "Cerrar ventana");
+            this.iconCerrar.Click += new System.EventHandler(this.iconCerrar_Click);
+            // 
+            // frmHistorialCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -279,15 +280,15 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvListado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmListarCierreCaja";
-            this.Text = "frmListarCierreCaja";
-            this.Load += new System.EventHandler(this.frmListarCierreCaja_Load);
+            this.Name = "frmHistorialCompras";
+            this.Text = "frmHistorialCompras";
+            this.Load += new System.EventHandler(this.frmHistorialCompras_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconActualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,16 +297,16 @@
 
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.PictureBox iconCerrar;
-        public Guna.UI2.WinForms.Guna2DataGridView dgvListado;
-        public Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        public System.Windows.Forms.PictureBox iconBuscar;
+        private System.Windows.Forms.ToolTip toolTip1;
+        public System.Windows.Forms.PictureBox iconActualizar;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpFechaFinal;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpFechaInicio;
+        public System.Windows.Forms.PictureBox iconCerrar;
         public System.Windows.Forms.Label lblTitulo;
-        public System.Windows.Forms.PictureBox iconBuscar;
-        public System.Windows.Forms.PictureBox iconActualizar;
-        private System.Windows.Forms.ToolTip toolTip1;
+        public Guna.UI2.WinForms.Guna2DataGridView dgvListado;
+        public Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }

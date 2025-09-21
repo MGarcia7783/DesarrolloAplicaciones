@@ -47,8 +47,8 @@ namespace Sistema.DAL
                 using (SqlCommand cmd = new SqlCommand("sp_BuscarCompras", cn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@FechaFinal", fechaInicial);
-                    cmd.Parameters.AddWithValue("@FechaFinal@FechaFinal", fechaFinal);
+                    cmd.Parameters.AddWithValue("@FechaInicio", fechaInicial);
+                    cmd.Parameters.AddWithValue("@FechaFinal", fechaFinal);
                     cn.Open();
 
                     using (SqlDataReader dr = cmd.ExecuteReader())

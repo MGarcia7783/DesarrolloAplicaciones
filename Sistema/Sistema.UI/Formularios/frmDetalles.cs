@@ -21,6 +21,8 @@ namespace Sistema.UI.Formularios
         {
             InitializeComponent();
 
+            formularioInvocador = invocador;
+
             this.idPedido = id;
         }
 
@@ -46,7 +48,10 @@ namespace Sistema.UI.Formularios
                 }
                 else if (formularioInvocador == tipoFormulario.compra)
                 {
+                    dgvListado.DataSource = bCompra.buscarDetalleCompra(id);
 
+                    dgvListado.Columns["P_COMPRA"].DefaultCellStyle.Format = "N2";
+                    dgvListado.Columns["P_VENTA"].DefaultCellStyle.Format = "N2";
                 }
 
                 dgvListado.Columns[0].Visible = false;

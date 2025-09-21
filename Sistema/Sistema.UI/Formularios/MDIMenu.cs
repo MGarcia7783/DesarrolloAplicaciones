@@ -195,7 +195,13 @@ namespace Sistema.UI.Formularios
         {
             AbrirFormulario(new frmCompra(), true);
         }
+
+        private void historialDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmHistorialCompras(), true);
+        }
         #endregion
+
 
     }
 }

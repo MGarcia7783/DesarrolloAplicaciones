@@ -12,25 +12,25 @@ using System.Windows.Forms;
 
 namespace Sistema.UI.Formularios
 {
-    public partial class frmHistorialPedidos : Form
+    public partial class frmHistorialCompras : Form
     {
         private Mensajes mensaje = new Mensajes();
 
-        public frmHistorialPedidos()
+        public frmHistorialCompras()
         {
             InitializeComponent();
         }
 
         #region Métodos
 
-        private void ListarPedidos()
+        private void ListarCompras()
         {
             try
             {
-                dgvListado.DataSource = bPedido.listarPedido();
-                if(dgvListado.Rows.Count > 0 )
+                dgvListado.DataSource = bCompra.listarCompra();
+                if (dgvListado.Rows.Count > 0)
                 {
-                    txtBuscar.Focus();
+                    dtpFechaInicio.Focus();
                 }
 
                 dgvListado.Columns[0].Visible = false;
@@ -39,7 +39,7 @@ namespace Sistema.UI.Formularios
                 dgvListado.Columns["IMPUESTO"].DefaultCellStyle.Format = "N2";
                 dgvListado.Columns["TOTAL"].DefaultCellStyle.Format = "N2";
             }
-            catch(Exception)
+            catch (Exception)
             {
                 mensaje.mensajeError("Error al cargar registros.");
             }
@@ -47,36 +47,39 @@ namespace Sistema.UI.Formularios
 
         #endregion
 
-        #region Eventos del Formulario
+        #region Botones de Comando
 
-        private void frmHistorialPedidos_Load(object sender, EventArgs e)
-        {
-            ListarPedidos();
-        }
-
-        #endregion
-
-        #region Botones de comando
         private void iconCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void iconActualizar_Click(object sender, EventArgs e)
+        {
+            ListarCompras();
+            dtpFechaInicio.Value = DateTime.Now;
+            dtpFechaFinal.Value = DateTime.Now;
         }
 
         private void iconBuscar_Click(object sender, EventArgs e)
         {
             try
             {
-                if(string.IsNullOrEmpty(txtBuscar.Text))
+                DateTime fechaInicio = dtpFechaInicio.Value.Date;
+                DateTime fechaFinal = dtpFechaFinal.Value.Date;
+
+                if (fechaInicio > fechaFinal)
                 {
-                    mensaje.mensajeInformacion("Debe especificar el número de factura.");
-                    txtBuscar.Focus();
+                    mensaje.mensajeInformacion("La fecha inicial no puede ser mayor que la fecha final.");
+                    dtpFechaInicio.Focus();
+                    return;
                 }
 
-                dgvListado.DataSource = bPedido.buscarPedido(txtBuscar.Text.Trim());
-                if(dgvListado.Rows.Count == 0 )
+                dgvListado.DataSource = bCompra.buscarCompra(fechaInicio, fechaFinal);
+                if (dgvListado.Rows.Count == 0)
                 {
                     mensaje.mensajeInformacion("No existe ningún registro para la consulta solicitada.");
-                    txtBuscar.Focus();
+                    dtpFechaInicio.Focus();
                     return;
                 }
             }
@@ -86,12 +89,18 @@ namespace Sistema.UI.Formularios
             }
         }
 
-        private void iconActualizar_Click(object sender, EventArgs e)
+        #endregion
+
+
+        #region Eventos del Formulario
+
+        private void frmHistorialCompras_Load(object sender, EventArgs e)
         {
-            ListarPedidos();
-            txtBuscar.Clear();
-            txtBuscar.Focus();
+            ListarCompras();
+            dtpFechaInicio.Value = DateTime.Now;
+            dtpFechaFinal.Value = DateTime.Now;
         }
+
         #endregion
 
         private void dgvListado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -102,21 +111,22 @@ namespace Sistema.UI.Formularios
                 {
                     int id = int.TryParse(dgvListado.CurrentRow.Cells["ID"].Value?.ToString(), out int result) ? result : 0;
 
-                    if(id == 0)
+                    if (id == 0)
                     {
                         mensaje.mensajeValidacion("ID de la venta no es válido.");
                     }
                     else
                     {
-                        frmDetalles frm = new frmDetalles(id, frmDetalles.tipoFormulario.venta);
+                        frmDetalles frm = new frmDetalles(id, frmDetalles.tipoFormulario.compra);
                         mostrarModal.MostrarConCapaTransparente(this, frm);
                     }
                 }
-            }   
-            catch(Exception)
+            }
+            catch (Exception)
             {
                 mensaje.mensajeError("Error al cargar los detalles.");
             }
         }
     }
+    
 }

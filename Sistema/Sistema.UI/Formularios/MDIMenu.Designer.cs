@@ -320,6 +320,7 @@
             this.historialDeComprasToolStripMenuItem.Name = "historialDeComprasToolStripMenuItem";
             this.historialDeComprasToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
             this.historialDeComprasToolStripMenuItem.Text = "Historial de compras";
+            this.historialDeComprasToolStripMenuItem.Click += new System.EventHandler(this.historialDeComprasToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
