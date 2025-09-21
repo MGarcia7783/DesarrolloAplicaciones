@@ -81,6 +81,7 @@
     <Compile Include="dLaboratorio.cs" />
     <Compile Include="dPedido.cs" />
     <Compile Include="dProducto.cs" />
+    <Compile Include="dUsuario.cs" />
     <Compile Include="GestorConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

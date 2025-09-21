@@ -110,6 +110,12 @@
     <Compile Include="Formularios\frmAgregarLaboratorio.Designer.cs">
       <DependentUpon>frmAgregarLaboratorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAgregarUsuario.Designer.cs">
+      <DependentUpon>frmAgregarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmBuscarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,12 @@
     <Compile Include="Formularios\frmTerminarPedido.Designer.cs">
       <DependentUpon>frmTerminarPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\MDIMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAgregarLaboratorio.resx">
       <DependentUpon>frmAgregarLaboratorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAgregarUsuario.resx">
+      <DependentUpon>frmAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmBuscarProductos.resx">
       <DependentUpon>frmBuscarProductos.cs</DependentUpon>
@@ -283,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmTerminarPedido.resx">
       <DependentUpon>frmTerminarPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\MDIMenu.resx">
       <DependentUpon>MDIMenu.cs</DependentUpon>

@@ -206,6 +206,10 @@ namespace Sistema.UI.Formularios
             AbrirFormulario(new frmKardex(), true);
         }
 
+        private void administradorDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmUsuarios(), true);
+        }
         #endregion
 
 

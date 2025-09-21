@@ -20,5 +20,33 @@ namespace Sistema.Entity
                 return false;
             }
         }
+
+        public static bool claveSegura(string clave)
+        {
+            if (string.IsNullOrWhiteSpace(clave))
+                return false;
+
+            // La contraseña debe tener al menos 7 caracteres
+            if (clave.Length < 7)
+                return false;
+
+            // Debe contener al menos una mayúscula
+            if (!System.Text.RegularExpressions.Regex.IsMatch(clave, "[A-Z]"))
+                return false;
+
+            // Debe contener al menos una minúscula
+            if (!System.Text.RegularExpressions.Regex.IsMatch(clave, "[a-z]"))
+                return false;
+
+            // Debe contener al menos un número
+            if (!System.Text.RegularExpressions.Regex.IsMatch(clave, "[0-9]"))
+                return false;
+
+            // Debe contener al menos un carácter especial
+            if (!System.Text.RegularExpressions.Regex.IsMatch(clave, "[!@#$%^&*(),.?\":{}|<>]"))
+                return false;
+
+            return true;
+        }
     }
 }
