@@ -78,5 +78,76 @@ namespace Sistema.DAL
                 throw new ApplicationException("Error al abrir la caja.");
             }
         }
+
+        public DataTable SumarTotales(int idUsuario)
+        {
+            DataTable lista = new DataTable();
+
+            try
+            {
+                using (SqlConnection cn = GestorConexion.ObtenerConexion())
+                using (SqlCommand cmd = new SqlCommand("sp_SumarTotales", cn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    cn.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        lista.Load(dr);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Error al sumar totales.");
+            }
+
+            return lista;
+        }
+
+        public bool CerrarCaja(oCaja Caja, out string supervisor)
+        {
+
+            try
+            {
+                using (SqlConnection cn = GestorConexion.ObtenerConexion())
+                using (SqlCommand cmd = new SqlCommand("sp_CerrarCaja", cn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@IdCaja", Caja.idCaja);
+                    cmd.Parameters.AddWithValue("@Efectivo", Caja.totalEfectivo);
+                    cmd.Parameters.AddWithValue("@Tarjeta", Caja.totalTarjeta);
+                    cmd.Parameters.AddWithValue("@Cambio", Caja.totalCambio);
+                    cmd.Parameters.AddWithValue("@Entregado", Caja.totalEntregado);
+                    cmd.Parameters.AddWithValue("@Codigo", Caja.codigo);
+                    cmd.Parameters.AddWithValue("@Observacion", Caja.observacion);
+
+                    SqlParameter supervisorDevuelto = new SqlParameter("@Supervisor", SqlDbType.NVarChar, 100)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add(supervisorDevuelto);
+
+                    SqlParameter respuesta = new SqlParameter("@Respuesta", SqlDbType.Int)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add(respuesta);
+
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+
+                    int resultado = Convert.ToInt32(respuesta.Value);
+                    supervisor = supervisorDevuelto.Value.ToString();
+
+                    return resultado == 1;
+                }
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Error al cerrar la caja.");
+            }
+        }
     }
 }

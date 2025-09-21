@@ -104,6 +104,12 @@
     <Compile Include="Formularios\frmCategorias.Designer.cs">
       <DependentUpon>frmCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmCerrarCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCerrarCaja.Designer.cs">
+      <DependentUpon>frmCerrarCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmConexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCategorias.resx">
       <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCerrarCaja.resx">
+      <DependentUpon>frmCerrarCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConexion.resx">
       <DependentUpon>frmConexion.cs</DependentUpon>

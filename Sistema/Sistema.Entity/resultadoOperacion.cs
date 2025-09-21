@@ -13,5 +13,6 @@ namespace Sistema.Entity
         public string campoInvalido { get; set; }
         public int idCaja { get; set; }
         public string numeroPedido { get; set; }
+        public string supervisor { get; set; }
     }
 }

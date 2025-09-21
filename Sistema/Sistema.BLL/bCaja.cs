@@ -94,5 +94,102 @@ namespace Sistema.BLL
                 };
             }
         }
+
+        public static DataTable SumarTotales(int idUsuario)
+        {
+            try
+            {
+                return cajaDal.SumarTotales(idUsuario);
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Error al sumar totales.");
+            }
+        }
+
+        private static resultadoOperacion validarCerrarCaja(oCaja Caja)
+        {
+            if (Caja.idCaja == 0)
+                return new resultadoOperacion
+                {
+                    esValido = false,
+                    mensaje = "No se ha especificad la caja a cerrar.",
+                    campoInvalido = "idCaja"
+                };
+
+            if (Caja.totalEfectivo <= 0)
+                return new resultadoOperacion
+                {
+                    esValido = false,
+                    mensaje = "El total en efectivo debe ser un número mayor a cero.",
+                    campoInvalido = "totalEfectivo"
+                };
+
+            if (Caja.totalTarjeta < 0)
+                return new resultadoOperacion
+                {
+                    esValido = false,
+                    mensaje = "El total en tarjeta debe ser un número mayor a cero.",
+                    campoInvalido = "totalTarjeta"
+                };
+
+            if (Caja.totalEntregado < 0)
+                return new resultadoOperacion
+                {
+                    esValido = false,
+                    mensaje = "El total a entregar debe ser un número mayor a cero.",
+                    campoInvalido = "totalEntregado"
+                };
+
+            if (string.IsNullOrWhiteSpace(Caja.codigo))
+                return new resultadoOperacion
+                {
+                    esValido = false,
+                    mensaje = "Debe especificar el código del supervisor que autoriza el cierre de caja.",
+                    campoInvalido = "codigo"
+                };
+
+            return new resultadoOperacion { esValido = true };
+        }
+
+        public static resultadoOperacion CerrarCaja(oCaja caja)
+        {
+            var validacion = validarCerrarCaja(caja);
+            if (!validacion.esValido)
+                return validacion;
+
+            try
+            {
+                string supervisorDevuelto;
+                bool resultado = cajaDal.CerrarCaja(caja, out supervisorDevuelto);
+
+                if (resultado)
+                {
+                    return new resultadoOperacion
+                    {
+                        esValido = true,
+                        mensaje = "La caja fue cerrada satisfactoriamente.",
+                        supervisor = supervisorDevuelto
+                    };
+                }
+                else
+                {
+                    return new resultadoOperacion
+                    {
+                        esValido = false,
+                        mensaje = "No se puedo cerrar la caja. Verfique los datos."
+                    };
+                }
+            }
+
+            catch (Exception)
+            {
+                return new resultadoOperacion
+                {
+                    esValido = false,
+                    mensaje = "Ocurrió un error inesperado al cerrar la caja."
+                };
+            }
+        }
     }
 }

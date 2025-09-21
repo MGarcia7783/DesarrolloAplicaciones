@@ -214,12 +214,13 @@
             this.cerrarCajaToolStripMenuItem.Name = "cerrarCajaToolStripMenuItem";
             this.cerrarCajaToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
             this.cerrarCajaToolStripMenuItem.Text = "Cerrar caja";
+            this.cerrarCajaToolStripMenuItem.Click += new System.EventHandler(this.cerrarCajaToolStripMenuItem_Click);
             // 
             // cierToolStripMenuItem
             // 
             this.cierToolStripMenuItem.Name = "cierToolStripMenuItem";
             this.cierToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
-            this.cierToolStripMenuItem.Text = "Cierre de caja";
+            this.cierToolStripMenuItem.Text = "Ver cierre de caja";
             // 
             // iconCatalogo
             // 

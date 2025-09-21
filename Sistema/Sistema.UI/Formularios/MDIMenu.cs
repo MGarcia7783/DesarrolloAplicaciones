@@ -180,8 +180,13 @@ namespace Sistema.UI.Formularios
             AbrirFormulario(new frmHistorialPedidos(), true);
         }
 
+
         #endregion
 
-
+        private void cerrarCajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCerrarCaja frm = new frmCerrarCaja();
+            mostrarModal.MostrarConCapaTransparente(this, frm);
+        }
     }
 }

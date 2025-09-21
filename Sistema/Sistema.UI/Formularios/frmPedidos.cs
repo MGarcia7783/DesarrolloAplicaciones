@@ -160,10 +160,6 @@ namespace Sistema.UI.Formularios
                         Variables.idCaja = Convert.ToInt32(id);
                     }
                 }
-                else
-                {
-                    mensaje.mensajeInformacion("No existe una caja abierta para este usuario.");
-                }
             }
             catch (Exception)
             {
