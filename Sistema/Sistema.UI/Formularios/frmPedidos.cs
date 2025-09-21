@@ -42,7 +42,7 @@ namespace Sistema.UI.Formularios
             }
             catch (Exception)
             {
-                mensaje.mensajeError("Errro al crear el DataTable.");
+                mensaje.mensajeError("Error al crear el DataTable.");
             }
         }
 
@@ -198,6 +198,13 @@ namespace Sistema.UI.Formularios
                 LimpiarControles();
                 iconGuardar.Enabled = true;
                 CalcularTotales();
+
+                Variables.idProducto = 0;
+                Variables.nombreProducto = "";
+                Variables.precioCompra = 0;
+                Variables.precioVenta = 0;
+                Variables.stock = 0;
+                Variables.impuesto = "";
 
                 txtBuscar.Focus();
 
@@ -466,10 +473,6 @@ namespace Sistema.UI.Formularios
             {
                 mensaje.mensajeError("Error al guardar el registro.");
             }
-
-
-
-
         }
 
         private void txtBuscar_IconLeftClick(object sender, EventArgs e)

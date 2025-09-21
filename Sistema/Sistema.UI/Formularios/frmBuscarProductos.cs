@@ -19,6 +19,8 @@ namespace Sistema.UI.Formularios
         public frmBuscarProductos(tipoFormulario invocador)
         {
             InitializeComponent();
+
+            formularioInvocador = invocador;
         }
 
         private void iconSalir_Click(object sender, EventArgs e)
@@ -46,11 +48,25 @@ namespace Sistema.UI.Formularios
 
                     dgvListado.Columns[0].Visible = false;
                     dgvListado.Columns[4].Visible = false;
-                    dgvListado.Columns[7].Visible = false;
+                    dgvListado.Columns[6].Visible = false;
+                    dgvListado.Columns[9].Visible = false;
+                    dgvListado.Columns[10].Visible = false;
+                    dgvListado.Columns[11].Visible = false;
+                    dgvListado.Columns[12].Visible = false;
+                    dgvListado.Columns[13].Visible = false;
                 }
                 else if(formularioInvocador == tipoFormulario.compra)
                 {
+                    dgvListado.DataSource = bProducto.listarTodosProductos();
 
+                    dgvListado.Columns[0].Visible = false;
+                    dgvListado.Columns[3].Visible = false;
+                    dgvListado.Columns[4].Visible = false;
+                    dgvListado.Columns[9].Visible = false;
+                    dgvListado.Columns[10].Visible = false;
+                    dgvListado.Columns[11].Visible = false;
+                    dgvListado.Columns[12].Visible = false;
+                    dgvListado.Columns[13].Visible = false;
                 }
 
                 if(dgvListado.Rows.Count > 0)
@@ -101,10 +117,10 @@ namespace Sistema.UI.Formularios
                 {
                     Variables.idProducto = Convert.ToInt32(dgvListado.CurrentRow.Cells[0].Value);
                     Variables.nombreProducto = dgvListado.CurrentRow.Cells[2].Value.ToString();
-                    Variables.precioCompra = Convert.ToDecimal(dgvListado.CurrentRow.Cells[4].Value);
-                    Variables.precioVenta = Convert.ToDecimal(dgvListado.CurrentRow.Cells[5].Value);
-                    Variables.stock = Convert.ToInt32(dgvListado.CurrentRow.Cells[6].Value);
-                    Variables.impuesto = dgvListado.CurrentRow.Cells[7].Value.ToString();
+                    Variables.precioCompra = Convert.ToDecimal(dgvListado.CurrentRow.Cells[6].Value);
+                    Variables.precioVenta = Convert.ToDecimal(dgvListado.CurrentRow.Cells[7].Value);
+                    Variables.stock = Convert.ToInt32(dgvListado.CurrentRow.Cells[8].Value);
+                    Variables.impuesto = dgvListado.CurrentRow.Cells[11].Value.ToString();
 
                     return true;
                 }
@@ -144,6 +160,17 @@ namespace Sistema.UI.Formularios
                             if(formularioPedido != null)
                             {
                                 formularioPedido.AgregarProductos(Variables.idProducto, Variables.nombreProducto, Variables.precioVenta, Variables.stock, Variables.impuesto);
+                            }
+
+                            e.Handled = true;
+                            e.SuppressKeyPress = true;
+                        }
+                        else
+                        {
+                            frmCompra formularioCompra = this.Owner as frmCompra;
+                            if (formularioCompra != null)
+                            {
+                                formularioCompra.AgregarProductos(Variables.idProducto, Variables.nombreProducto, 1, Variables.precioCompra, Variables.precioVenta, Variables.impuesto);
                             }
 
                             e.Handled = true;
