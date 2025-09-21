@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DtsConexion" targetNamespace="http://tempuri.org/DtsConexion.xsd" xmlns:mstns="http://tempuri.org/DtsConexion.xsd" xmlns="http://tempuri.org/DtsConexion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DtsConexion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DtsConexion" msprop:Generator_DataSetName="DtsConexion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Kardex" msprop:Generator_RowEvHandlerName="KardexRowChangeEventHandler" msprop:Generator_RowDeletedName="KardexRowDeleted" msprop:Generator_RowDeletingName="KardexRowDeleting" msprop:Generator_RowEvArgName="KardexRowChangeEvent" msprop:Generator_TablePropName="Kardex" msprop:Generator_RowChangedName="KardexRowChanged" msprop:Generator_RowChangingName="KardexRowChanging" msprop:Generator_TableClassName="KardexDataTable" msprop:Generator_RowClassName="KardexRow" msprop:Generator_TableVarName="tableKardex" msprop:Generator_UserTableName="Kardex">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="REFERENCIA" msprop:Generator_ColumnPropNameInRow="REFERENCIA" msprop:Generator_ColumnPropNameInTable="REFERENCIAColumn" msprop:Generator_ColumnVarNameInTable="columnREFERENCIA" msprop:Generator_UserColumnName="REFERENCIA" type="xs:string" minOccurs="0" />
+              <xs:element name="OPERACION" msprop:Generator_ColumnPropNameInRow="OPERACION" msprop:Generator_ColumnPropNameInTable="OPERACIONColumn" msprop:Generator_ColumnVarNameInTable="columnOPERACION" msprop:Generator_UserColumnName="OPERACION" type="xs:string" minOccurs="0" />
+              <xs:element name="ENTRADA" msprop:Generator_ColumnPropNameInRow="ENTRADA" msprop:Generator_ColumnPropNameInTable="ENTRADAColumn" msprop:Generator_ColumnVarNameInTable="columnENTRADA" msprop:Generator_UserColumnName="ENTRADA" type="xs:int" minOccurs="0" />
+              <xs:element name="C_ENTRADA" msprop:Generator_ColumnPropNameInRow="C_ENTRADA" msprop:Generator_ColumnPropNameInTable="C_ENTRADAColumn" msprop:Generator_ColumnVarNameInTable="columnC_ENTRADA" msprop:Generator_UserColumnName="C_ENTRADA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="T_ENTRADA" msprop:Generator_ColumnPropNameInRow="T_ENTRADA" msprop:Generator_ColumnPropNameInTable="T_ENTRADAColumn" msprop:Generator_ColumnVarNameInTable="columnT_ENTRADA" msprop:Generator_UserColumnName="T_ENTRADA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SALIDA" msprop:Generator_ColumnPropNameInRow="SALIDA" msprop:Generator_ColumnPropNameInTable="SALIDAColumn" msprop:Generator_ColumnVarNameInTable="columnSALIDA" msprop:Generator_UserColumnName="SALIDA" type="xs:int" minOccurs="0" />
+              <xs:element name="C_SALIDA" msprop:Generator_ColumnPropNameInRow="C_SALIDA" msprop:Generator_ColumnPropNameInTable="C_SALIDAColumn" msprop:Generator_ColumnVarNameInTable="columnC_SALIDA" msprop:Generator_UserColumnName="C_SALIDA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="T_SALIDA" msprop:Generator_ColumnPropNameInRow="T_SALIDA" msprop:Generator_ColumnPropNameInTable="T_SALIDAColumn" msprop:Generator_ColumnVarNameInTable="columnT_SALIDA" msprop:Generator_UserColumnName="T_SALIDA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EXISTENCIA" msprop:Generator_ColumnPropNameInRow="EXISTENCIA" msprop:Generator_ColumnPropNameInTable="EXISTENCIAColumn" msprop:Generator_ColumnVarNameInTable="columnEXISTENCIA" msprop:Generator_UserColumnName="EXISTENCIA" type="xs:int" minOccurs="0" />
+              <xs:element name="PROMEDIO" msprop:Generator_ColumnPropNameInRow="PROMEDIO" msprop:Generator_ColumnPropNameInTable="PROMEDIOColumn" msprop:Generator_ColumnVarNameInTable="columnPROMEDIO" msprop:Generator_UserColumnName="PROMEDIO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COSTO" msprop:Generator_ColumnPropNameInRow="COSTO" msprop:Generator_ColumnPropNameInTable="COSTOColumn" msprop:Generator_ColumnVarNameInTable="columnCOSTO" msprop:Generator_UserColumnName="COSTO" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

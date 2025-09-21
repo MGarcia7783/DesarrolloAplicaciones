@@ -1,5 +1,6 @@
 ﻿using Sistema.BLL;
 using Sistema.UI.Modulos;
+using Sistema.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -120,7 +121,31 @@ namespace Sistema.UI.Formularios
 
         private void iconImprimir_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if(dgvListado.Rows.Count == 0)
+                {
+                    mensaje.mensajeInformacion("No hay registros disponibles para mostrar.");
+                    return;
+                }
 
+                string codigo = txtCodigo.Text.Trim();
+                string nombrePrducto;
+
+                string fechaInicio = dtpFechaInicio.Value.Date.ToString("dd/MM/yyyy");
+                string fechaFinal = dtpFechaFinal.Value.Date.ToString("dd/MM/yyyy");
+
+                string periodo = $"Período del: {fechaInicio} al {fechaFinal}";
+
+                DataTable datos = bProducto.BuscarKardex(codigo, dtpFechaInicio.Value.Date, dtpFechaFinal.Value.Date, out nombrePrducto);
+
+                frmReporteKardex frm = new frmReporteKardex(datos, codigo, nombrePrducto, periodo);
+                frm.ShowDialog();   
+            }
+            catch(Exception)
+            {
+                mensaje.mensajeError("Error al cargar el reporte.");
+            }
         }
 
 
