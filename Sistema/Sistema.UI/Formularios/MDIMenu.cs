@@ -191,7 +191,10 @@ namespace Sistema.UI.Formularios
             AbrirFormulario(new frmListarCierreCaja(), true);
         }
 
-
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmCompra(), true);
+        }
         #endregion
 
     }

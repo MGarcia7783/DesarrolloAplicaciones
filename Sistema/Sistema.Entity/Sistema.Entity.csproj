@@ -44,6 +44,7 @@
     <Compile Include="DatosConexion.cs" />
     <Compile Include="oCaja.cs" />
     <Compile Include="oCategoria.cs" />
+    <Compile Include="oCompra.cs" />
     <Compile Include="oLaboratorio.cs" />
     <Compile Include="oProducto.cs" />
     <Compile Include="oPedido.cs" />

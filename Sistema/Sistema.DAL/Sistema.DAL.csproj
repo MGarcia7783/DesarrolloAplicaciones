@@ -77,6 +77,7 @@
   <ItemGroup>
     <Compile Include="dCaja.cs" />
     <Compile Include="dCategoria.cs" />
+    <Compile Include="dCompra.cs" />
     <Compile Include="dLaboratorio.cs" />
     <Compile Include="dPedido.cs" />
     <Compile Include="dProducto.cs" />
