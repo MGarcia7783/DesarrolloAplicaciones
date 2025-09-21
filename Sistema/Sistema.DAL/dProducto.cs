@@ -121,6 +121,45 @@ namespace Sistema.DAL
             return lista;
         }
 
+        public DataTable BuscarKardex(string codigo, DateTime fechaInicio, DateTime fechaFinal, out string nombreProducto)
+        {
+            DataTable lista = new DataTable();
+            nombreProducto = string.Empty;
+
+            try
+            {
+                using (SqlConnection cn = GestorConexion.ObtenerConexion())
+                using (SqlCommand cmd = new SqlCommand("sp_BuscarKardex", cn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@Codigo", codigo);
+                    cmd.Parameters.AddWithValue("@FechaInicio", fechaInicio);
+                    cmd.Parameters.AddWithValue("@FechaFinal", fechaFinal);
+
+                    SqlParameter nombreDevuelto = new SqlParameter("@Producto", SqlDbType.VarChar, 100)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add(nombreDevuelto);
+                    cn.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        lista.Load(dr);
+                    }
+
+                    nombreProducto = nombreDevuelto.Value?.ToString();
+                }
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Error al buscar los registros.");
+            }
+
+            return lista;
+        }
+
         public bool registrarProducto(oProducto producto)
         {
             try

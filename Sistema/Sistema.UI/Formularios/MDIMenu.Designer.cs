@@ -61,8 +61,6 @@
             this.iconSeguridad = new FontAwesome.Sharp.IconDropDownButton();
             this.administradorDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.editarDatosDeLaEmpresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.conexiónALaBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backupDeLaBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iconSalir = new FontAwesome.Sharp.IconToolStripButton();
@@ -332,6 +330,7 @@
             this.kardexDeProductosToolStripMenuItem.Name = "kardexDeProductosToolStripMenuItem";
             this.kardexDeProductosToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
             this.kardexDeProductosToolStripMenuItem.Text = "Kardex de productos";
+            this.kardexDeProductosToolStripMenuItem.Click += new System.EventHandler(this.kardexDeProductosToolStripMenuItem_Click);
             // 
             // iconSeguridad
             // 
@@ -339,8 +338,6 @@
             this.iconSeguridad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.administradorDeUsuariosToolStripMenuItem,
             this.toolStripSeparator7,
-            this.editarDatosDeLaEmpresaToolStripMenuItem,
-            this.toolStripSeparator8,
             this.conexiónALaBaseDeDatosToolStripMenuItem,
             this.backupDeLaBaseDeDatosToolStripMenuItem});
             this.iconSeguridad.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -364,17 +361,6 @@
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(265, 6);
-            // 
-            // editarDatosDeLaEmpresaToolStripMenuItem
-            // 
-            this.editarDatosDeLaEmpresaToolStripMenuItem.Name = "editarDatosDeLaEmpresaToolStripMenuItem";
-            this.editarDatosDeLaEmpresaToolStripMenuItem.Size = new System.Drawing.Size(268, 24);
-            this.editarDatosDeLaEmpresaToolStripMenuItem.Text = "Editar datos de la empresa";
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(265, 6);
             // 
             // conexiónALaBaseDeDatosToolStripMenuItem
             // 
@@ -497,8 +483,6 @@
         private System.Windows.Forms.ToolStripMenuItem kardexDeProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administradorDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripMenuItem editarDatosDeLaEmpresaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripMenuItem conexiónALaBaseDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem backupDeLaBaseDeDatosToolStripMenuItem;
         private System.Windows.Forms.Panel panelContenedor;

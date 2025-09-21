@@ -61,6 +61,18 @@ namespace Sistema.BLL
             }
         }
 
+        public static DataTable BuscarKardex(string codigo, DateTime fechaInicio, DateTime fechaFinal, out string nombreProducto)
+        {
+            try
+            {
+                return productoDal.BuscarKardex(codigo, fechaInicio, fechaFinal, out nombreProducto);
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Error al buscar registros.");
+            }
+        }
+
         private static resultadoOperacion validarProducto(oProducto producto)
         {
             if (string.IsNullOrWhiteSpace(producto.codigo))

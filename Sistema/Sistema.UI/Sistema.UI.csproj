@@ -140,6 +140,12 @@
     <Compile Include="Formularios\frmHistorialPedidos.Designer.cs">
       <DependentUpon>frmHistorialPedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmKardex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmKardex.Designer.cs">
+      <DependentUpon>frmKardex.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmLaboratorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmHistorialPedidos.resx">
       <DependentUpon>frmHistorialPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmKardex.resx">
+      <DependentUpon>frmKardex.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLaboratorio.resx">
       <DependentUpon>frmLaboratorio.cs</DependentUpon>

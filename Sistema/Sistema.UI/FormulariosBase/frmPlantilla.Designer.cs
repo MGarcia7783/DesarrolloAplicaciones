@@ -36,19 +36,20 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconCerrar = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.dgvListado = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
             this.iconEliminar = new System.Windows.Forms.PictureBox();
             this.iconEditar = new System.Windows.Forms.PictureBox();
             this.iconAgregar = new System.Windows.Forms.PictureBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.dgvListado = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconAgregar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -59,11 +60,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(131)))), ((int)(((byte)(142)))));
-            this.panel1.Controls.Add(this.iconCerrar);
             this.panel1.Controls.Add(this.txtBuscar);
             this.panel1.Controls.Add(this.iconEliminar);
             this.panel1.Controls.Add(this.iconEditar);
             this.panel1.Controls.Add(this.iconAgregar);
+            this.panel1.Controls.Add(this.iconCerrar);
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -82,77 +83,15 @@
             this.iconCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.iconCerrar.TabIndex = 5;
             this.iconCerrar.TabStop = false;
+            this.toolTip1.SetToolTip(this.iconCerrar, "Cerrar ventana");
             this.iconCerrar.Click += new System.EventHandler(this.iconCerrar_Click);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscar.BorderRadius = 8;
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.DefaultText = "";
-            this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscar.DisabledState.Parent = this.txtBuscar;
-            this.txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscar.FocusedState.Parent = this.txtBuscar;
-            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscar.HoverState.Parent = this.txtBuscar;
-            this.txtBuscar.IconLeft = global::Sistema.UI.Properties.Resources.icons8_search_24;
-            this.txtBuscar.Location = new System.Drawing.Point(642, 21);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.PasswordChar = '\0';
-            this.txtBuscar.PlaceholderText = "Buscar registro...";
-            this.txtBuscar.SelectedText = "";
-            this.txtBuscar.ShadowDecoration.Parent = this.txtBuscar;
-            this.txtBuscar.Size = new System.Drawing.Size(419, 40);
-            this.txtBuscar.TabIndex = 4;
-            // 
-            // iconEliminar
-            // 
-            this.iconEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconEliminar.Image = global::Sistema.UI.Properties.Resources.icon_del_48;
-            this.iconEliminar.Location = new System.Drawing.Point(551, 21);
-            this.iconEliminar.Name = "iconEliminar";
-            this.iconEliminar.Size = new System.Drawing.Size(42, 42);
-            this.iconEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconEliminar.TabIndex = 3;
-            this.iconEliminar.TabStop = false;
-            // 
-            // iconEditar
-            // 
-            this.iconEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconEditar.Image = global::Sistema.UI.Properties.Resources.icon_edit_48;
-            this.iconEditar.Location = new System.Drawing.Point(497, 21);
-            this.iconEditar.Name = "iconEditar";
-            this.iconEditar.Size = new System.Drawing.Size(38, 42);
-            this.iconEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconEditar.TabIndex = 2;
-            this.iconEditar.TabStop = false;
-            // 
-            // iconAgregar
-            // 
-            this.iconAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconAgregar.Image = global::Sistema.UI.Properties.Resources.icon_mas_48;
-            this.iconAgregar.Location = new System.Drawing.Point(434, 21);
-            this.iconAgregar.Name = "iconAgregar";
-            this.iconAgregar.Size = new System.Drawing.Size(42, 42);
-            this.iconAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconAgregar.TabIndex = 1;
-            this.iconAgregar.TabStop = false;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(13, 25);
+            this.lblTitulo.Location = new System.Drawing.Point(13, 22);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(105, 37);
             this.lblTitulo.TabIndex = 0;
@@ -194,7 +133,7 @@
             this.dgvListado.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListado.EnableHeadersVisualStyles = false;
             this.dgvListado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListado.Location = new System.Drawing.Point(20, 106);
+            this.dgvListado.Location = new System.Drawing.Point(20, 119);
             this.dgvListado.Name = "dgvListado";
             this.dgvListado.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -239,6 +178,69 @@
             this.guna2Elipse2.BorderRadius = 15;
             this.guna2Elipse2.TargetControl = this.dgvListado;
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscar.BorderRadius = 8;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.DefaultText = "";
+            this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.DisabledState.Parent = this.txtBuscar;
+            this.txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscar.FocusedState.Parent = this.txtBuscar;
+            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscar.HoverState.Parent = this.txtBuscar;
+            this.txtBuscar.IconLeft = global::Sistema.UI.Properties.Resources.icons8_search_24;
+            this.txtBuscar.Location = new System.Drawing.Point(642, 21);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.PasswordChar = '\0';
+            this.txtBuscar.PlaceholderText = "Buscar registro...";
+            this.txtBuscar.SelectedText = "";
+            this.txtBuscar.ShadowDecoration.Parent = this.txtBuscar;
+            this.txtBuscar.Size = new System.Drawing.Size(419, 40);
+            this.txtBuscar.TabIndex = 9;
+            // 
+            // iconEliminar
+            // 
+            this.iconEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconEliminar.Image = global::Sistema.UI.Properties.Resources.icon_del_48;
+            this.iconEliminar.Location = new System.Drawing.Point(551, 21);
+            this.iconEliminar.Name = "iconEliminar";
+            this.iconEliminar.Size = new System.Drawing.Size(42, 42);
+            this.iconEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconEliminar.TabIndex = 8;
+            this.iconEliminar.TabStop = false;
+            // 
+            // iconEditar
+            // 
+            this.iconEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconEditar.Image = global::Sistema.UI.Properties.Resources.icon_edit_48;
+            this.iconEditar.Location = new System.Drawing.Point(497, 21);
+            this.iconEditar.Name = "iconEditar";
+            this.iconEditar.Size = new System.Drawing.Size(38, 42);
+            this.iconEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconEditar.TabIndex = 7;
+            this.iconEditar.TabStop = false;
+            // 
+            // iconAgregar
+            // 
+            this.iconAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconAgregar.Image = global::Sistema.UI.Properties.Resources.icon_mas_48;
+            this.iconAgregar.Location = new System.Drawing.Point(434, 21);
+            this.iconAgregar.Name = "iconAgregar";
+            this.iconAgregar.Size = new System.Drawing.Size(42, 42);
+            this.iconAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconAgregar.TabIndex = 6;
+            this.iconAgregar.TabStop = false;
+            // 
             // frmPlantilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,10 +254,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconAgregar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,13 +265,14 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label lblTitulo;
-        public System.Windows.Forms.PictureBox iconAgregar;
-        public System.Windows.Forms.PictureBox iconEliminar;
-        public System.Windows.Forms.PictureBox iconEditar;
-        public Guna.UI2.WinForms.Guna2TextBox txtBuscar;
         public System.Windows.Forms.PictureBox iconCerrar;
         public Guna.UI2.WinForms.Guna2DataGridView dgvListado;
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private System.Windows.Forms.ToolTip toolTip1;
+        public Guna.UI2.WinForms.Guna2TextBox txtBuscar;
+        public System.Windows.Forms.PictureBox iconEliminar;
+        public System.Windows.Forms.PictureBox iconEditar;
+        public System.Windows.Forms.PictureBox iconAgregar;
     }
 }

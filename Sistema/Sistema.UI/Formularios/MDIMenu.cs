@@ -200,6 +200,12 @@ namespace Sistema.UI.Formularios
         {
             AbrirFormulario(new frmHistorialCompras(), true);
         }
+
+        private void kardexDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmKardex(), true);
+        }
+
         #endregion
 
 
